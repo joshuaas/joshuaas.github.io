@@ -8,6 +8,6 @@ RUN apk add --no-cache --virtual .build-deps \
         g++ \
         make \
     && apk add --no-cache imagemagick-dev imagemagick
-WORKDIR /srv/jekyll
-ADD Gemfile /srv/jekyll/
+WORKDIR /home/shaocr/shaocr-cv.github.io/
+ADD Gemfile /home/shaocr/shaocr-cv.github.io/
 RUN bundle install

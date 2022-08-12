@@ -4,3 +4,24 @@
 
 "PhysRev":
   url: https://journals.aps.org/
+
+"TPAMI":
+  color: "#4B66AD"
+
+"TIP":
+  color: "#4B66AD"
+
+"ICML":
+  color: "#da70d6"
+
+"AAAI":
+  color: "#da70d6"
+
+"NeurIPS":
+  color: "#da70d6"
+
+"MM":
+  color: "#da70d6"
+
+"CVPR":
+  color: "#da70d6"

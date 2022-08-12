@@ -1,12 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - joshuaas
+  - statusrank
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - statusrank/XCurve
+  - joshuaas/Learning-with-Multiclass-AUC-Theory-and-Algorithms
+  - joshuaas/T-PAMI20-Task-Feature-Collaborative-Learning-with-Application-to-Personalized-Attribute-Prediction
+  - joshuaas/GBDSP-NeurIPS19
+  - joshuaas/SM2SC

@@ -6,7 +6,7 @@ layout: default
       <div class="post">
         <header class="post-header">
           <h1 class="post-title">
-           {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
+           {% if site.title == "blank" -%}<span>{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
           </h1>
           <p class="desc">{{ page.subtitle }}</p>
         </header>
@@ -28,15 +28,28 @@ layout: default
               class=profile_image_class
               alt=page.profile.image -%}
             {% endif -%}
-            {%- if page.profile.address %}
+            <!-- {%- if page.profile.address %}
             <div class="address">
               {{ page.profile.address }}
+            </div>
+            {%- endif %} -->
+            {%- if page.social %}
+            <!-- Social -->
+            <div class="social">
+              <div class="contact-icons" style="font-size:40px;">
+              {% include social.html %}
+              </div>
+  
+              <div class="contact-note">
+                {{ site.contact_note }}
+              </div>
+              
             </div>
             {%- endif %}
           </div>
           {%- endif %}
 
-          <div class="clearfix">
+          <div class="clearfix" style="text-align:justify;">
             {{ content }}
           </div>
 
@@ -44,22 +57,11 @@ layout: default
           <!-- News -->
           {%- include news.html %}
           {%- endif %}
+          {%- include awards.html %}
+          {%- include services.html %}
           {% if page.selected_papers -%}
             <!-- Selected papers -->
             {%- include selected_papers.html %}
-          {%- endif %}
-          {%- if page.social %}
-          <!-- Social -->
-          <div class="social">
-            <div class="contact-icons">
-            {% include social.html %}
-            </div>
-
-            <div class="contact-note">
-              {{ site.contact_note }}
-            </div>
-            
-          </div>
           {%- endif %}
         </article>
 

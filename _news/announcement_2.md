@@ -1,7 +1,7 @@
 ---
 layout: post
-title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
+title: One paper has been accepted by NeurIPS 2021
+date: 2021-08-07 16:11:00
 inline: false
 ---
 

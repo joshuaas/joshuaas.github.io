@@ -1,0 +1,26 @@
+          
+          <div class="news">
+            <h2>awards</h2>
+            {% if site.awards != blank -%} 
+            {%- assign awards_size = site.awards | size -%}
+            <div class="table-responsive">
+              <table class="table table-sm table-borderless">
+              {%- assign awards = site.awards | reverse -%}
+              {% for item in awards limit: awards_limit %} 
+                <tr>
+                  <th scope="row" style="width:150px;">{{ item.date | date: "%b %-d, %Y" }}</th>
+                  <td>
+                    {% if item.inline -%} 
+                      {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                    {%- else -%} 
+                      <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                    {%- endif %} 
+                  </td>
+                </tr>
+              {%- endfor %} 
+              </table>
+            </div>
+          {%- else -%} 
+            <p>No awards so far...</p>
+          {%- endif %} 
+          </div>

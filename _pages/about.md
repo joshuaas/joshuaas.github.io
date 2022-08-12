@@ -2,24 +2,21 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Postdoctoral Research Fellow 
+          <a href='https://scce.ucas.ac.cn/'>School of Computer Science and Technology, UCAS</a>. 
 
 profile:
   align: right
   image: prof_pic.jpg
   image_cicular: false # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
+    <p class="text-center" style="font-family:'Microsoft YaHei'; font-weight:bold;">postdoc@UCAS</p>
+services: true
+awards: true
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
+titles: ['TPAMI', 'ICML', 'NeurIPS', 'CVPR', 'TIP', 'AAAI', 'MM' ]
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Hi! I'm Zhiyong Yang(杨智勇), a Postdoctoral Research Fellow with the School of Computer Science and Technology, University of Chinese Academy of Sciences. I got my Ph.D. degree from Institute of Information Engineering, Chinese Academy of Sciences (IIE, CAS) in 2021, supervised by Prof. [Qingming Huang](https://qmhuang-ucas.github.io/) (IEEE Fellow). I am also lucky to have opportunities to collaborate with [Qianqian Xu](https://qianqianxu010.github.io/) (Professor at ICT CAS), [Xiaochun Cao](http://people.ucas.ac.cn/~xiaochun) (Professor at Sun Yat-sen University, Shenzhen Compus, China), [Yuan Yao](https://yao-lab.github.io/) (Professor at HKUST), [Jiechao Xiong](https://scholar.google.com/citations?user=X8YIcKEAAAAJ&hl=zh-CN) (Research Fellow at Tencent Lab AI Lab), [Yuan Su](http://yuansu.me/) (Senior Researcher at Microsoft Quantum), [Ke Ma](https://www.researchgate.net/profile/Ke_Ma10) (postdoc at UCAS), [Yangbangyan Jiang](https://scholar.google.com/citations?user=h4Zm5d8AAAAJ&hl=zh-CN) (Ph.D. Student at IIE, CAS), and [Jingcheng Lu](https://www.linkedin.com/in/will-lu/) (Computer Science graduate student at UC Irvine).
