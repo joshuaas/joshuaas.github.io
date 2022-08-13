@@ -11,28 +11,17 @@
           {% endif %}
           <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
             {% if content.title %}
-            <a class="title font-weight-bold" href="{{ content.link }}">{{content.title}}</a>
+            <div style="padding-left:15px;"><a class="title font-weight-bold"  href="{{ content.link }}">{{content.title}}, {{content.institution}}</a></div>
+            
             {% endif %}
             {% if content.institution %}
-            <h6 class="" style="font-size: 0.95rem;">{{content.institution}}</h6>
+            <!-- <h6 class="" style="font-size: 0.95rem;">{{content.institution}}</h6> -->
+            {% endif %}
+            {% if content.pic %}
+            <div style="margin-top:20px;margin-bottom:20px;padding-left:15px;"><img src="{{ content.pic }}" class="col-md-10" style="padding-left:0px;"/></div>
             {% endif %}
             {% if content.description %}
-              <ul class="items">
-                {% for item in content.description %}
-                  <li>
-                    {% if item.contents %}
-                      <span class="item-title">{{ item.title }}</span>
-                      <ul class="subitems">
-                      {% for subitem in item.contents %}
-                        <li><span class="subitem">{{ subitem }}</span></li>
-                      {% endfor %}
-                      </ul>
-                    {% else %}
-                      <span class="item">{{ item }}</span>
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              </ul>
+            <p class="col-md-11" style="text-align:justify;">{{content.description}}</p>
             {% endif %}
             {% if content.items %}
               <ul class="items">

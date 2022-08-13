@@ -7,21 +7,34 @@
 
 "TPAMI":
   color: "#4B66AD"
+  type: Journal
+  IF: 24.314
 
 "TIP":
   color: "#4B66AD"
+  type: Journal
+  IF: 11.041
 
 "ICML":
   color: "#da70d6"
+  type: CCF-A
 
 "AAAI":
   color: "#da70d6"
+  type: CCF-A
 
 "NeurIPS":
   color: "#da70d6"
-
+  type: CCF-A
+  
 "MM":
   color: "#da70d6"
+  type: CCF-A
 
 "CVPR":
   color: "#da70d6"
+  type: CCF-A
+
+"IJCAI":
+  color: "#da70d6"
+  type: CCF-A
