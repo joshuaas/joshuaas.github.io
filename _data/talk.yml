@@ -11,7 +11,7 @@
       items:
         - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Yuan He, Xiaochun Cao and Qingming Huang. When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC. International Conference on Machine Learning (ICML), 11820–11829, 2021"
         - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Xiaochun Cao and Qingming Huang. Learning with Multiclass AUC: Theory and Algorithms. IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2021. (Early Access)"
-    - title: "When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC (oral 3%)"
+    - title: "When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC"
       link: "https://www.bilibili.com/video/BV1VQ4y1C75e?spm_id_from=333.999.0.0"
       institution: 2021
       pic: "/assets/img/talks/aitime.png"
@@ -45,7 +45,7 @@
                   '
       items:
         - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Yuan He, Xiaochun Cao and Qingming Huang. When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC. International Conference on Machine Learning (ICML), 11820–11829, 2021"
-    - title: "When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC (oral 3%)"
+    - title: "When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC (Long Talk 3%)"
       link: "https://slideslive.com/38958537/when-all-we-need-is-a-piece-of-the-pie-a-generic-framework-for-optimizing-twoway-partial-auc?ref=speaker-22247"
       institution: 2021
       pic: "/assets/img/talks/icml.jpg"
