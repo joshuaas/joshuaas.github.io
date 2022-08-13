@@ -2,8 +2,8 @@
           <div class="publications">
             <h2 style="border-bottom: 1.5px solid rgba(0, 0, 0, 0.1); padding-bottom: 10px;" ><strong>Selected Papers</strong></h2>
             {%- for t in page.titles %}
-            {%- for y in page.years %}
             {%- for author in page.authors %}
+            {%- for y in page.years %}
             {% bibliography -f papers -q @*[selected=true && year={{y}} && abbr={{t}} && first_author={{author}}]* %}
             {% endfor %}
             {% endfor %}
