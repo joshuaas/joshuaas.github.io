@@ -8,10 +8,10 @@
       pic: "/assets/img/talks/techbeat.png"
       institution: 2021
       description: ''
-      related works:
+      items:
         - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Yuan He, Xiaochun Cao and Qingming Huang. When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC. International Conference on Machine Learning (ICML), 11820–11829, 2021"
         - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Xiaochun Cao and Qingming Huang. Learning with Multiclass AUC: Theory and Algorithms. IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2021. (Early Access)"
-    - title: "When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC"
+    - title: "When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC (oral 3%)"
       link: "https://www.bilibili.com/video/BV1VQ4y1C75e?spm_id_from=333.999.0.0"
       institution: 2021
       pic: "/assets/img/talks/aitime.png"
@@ -43,9 +43,9 @@
                   performance in terms of TPAUC with a high probability. Finally, empirical studies over several
                   benchmark datasets speak to the efficacy of our framework.
                   '
-      related works:
+      items:
         - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Yuan He, Xiaochun Cao and Qingming Huang. When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC. International Conference on Machine Learning (ICML), 11820–11829, 2021"
-    - title: "When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC"
+    - title: "When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC (oral 3%)"
       link: "https://slideslive.com/38958537/when-all-we-need-is-a-piece-of-the-pie-a-generic-framework-for-optimizing-twoway-partial-auc?ref=speaker-22247"
       institution: 2021
       pic: "/assets/img/talks/icml.jpg"
@@ -77,9 +77,9 @@
             performance in terms of TPAUC with a high probability. Finally, empirical studies over several
             benchmark datasets speak to the efficacy of our framework.
             '
-      related works:
+      items:
         - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Yuan He, Xiaochun Cao and Qingming Huang. When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC. International Conference on Machine Learning (ICML), 11820–11829, 2021"
-    - title: "DM2C: Deep Mixed-Modal Clustering"
+    - title: "DM2C: Deep Mixed-Modal Clustering (Spotlight 2.4%)"
       link: "https://slideslive.com/38922303/track-1-session-3-spotlights?ref=speaker-22247"
       institution: 2019
       pic: "/assets/img/talks/nips.png"
@@ -98,6 +98,6 @@
                     Evaluations on several real-world mixed-modal datasets could demonstrate the
                     superiority of our proposed framework.
                   '
-      related works:
+      items:
         - "Jiang, Yangbangyan, et al. Dm2c: Deep mixed-modal clustering. Advances in Neural Information Processing Systems 32 (2019)."
     
