@@ -13,7 +13,7 @@ nav_order: 1
 <div class="publications">
 
 {%- for y in page.years %}
-  <h2 class="col-sm-10" style="padding-top: 1rem; margin-bottom:2rem; margin-top: 2rem; border-bottom: 1px solid rgba(0,0,0,0.3); color: rgb(189, 37, 181); padding-left: 0px;">{{y}}</h2>
+  <h2 class="col-sm-10" style="padding-top: 1rem; margin-bottom:2rem; margin-top: 2rem; border-bottom: 1px solid rgba(0,0,0,0.3); color: rgb(189, 37, 181); padding-left: 0px;"><a href="#">{{y}}</a></h2>
   {%- for t in page.titles %}
     {%- for author in page.authors %}
       {% bibliography -f papers -q @*[year={{y}} && abbr={{t}} && first_author={{author}}]* %}
