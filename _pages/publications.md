@@ -5,7 +5,7 @@ title: Publications
 description: publications by categories in reversed chronological order.
 years: ['2022', '2021', '2020', '2019', '2018']
 titles: ['TPAMI', 'ICML', 'NeurIPS', 'CVPR', 'TIP', 'AAAI', 'IJCAI', 'MM' ]
-authors: ['Yang Zhiyong', 'Xu Qianqian', 'Bao Shilong', 'Zitai Wang', 'Wen Peisong', 'Jiang Yangbangyan' ,'Ma Ke', 'Cao Tianwei', 'Hou Wenzheng', 'Cao Zongsheng', 'Hao Qianxiu', 'Jiang Xuan']
+authors: ['Yang Zhiyong', 'Xu Qianqian', 'Bao Shilong', 'Zitai Wang', 'Wen Peisong', 'Jiang Yangbangyan' ,'Ma Ke', 'Cao Tianwei', 'Hou Wenzheng', 'Cao Zongsheng', 'Hao Qianxiu', 'Jiang Xuan', 'Junyu Chen']
 nav: true
 nav_order: 1
 ---
