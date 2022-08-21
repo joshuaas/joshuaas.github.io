@@ -16,25 +16,25 @@
   IF: 11.041
 
 "ICML":
-  color: "#da70d6"
+  color: "#b509ac"
   type: CCF-A
 
 "AAAI":
-  color: "#da70d6"
+  color: "#b509ac"
   type: CCF-A
 
 "NeurIPS":
-  color: "#da70d6"
+  color: "#b509ac"
   type: CCF-A
   
 "MM":
-  color: "#da70d6"
+  color: "#b509ac"
   type: CCF-A
 
 "CVPR":
-  color: "#da70d6"
+  color: "#b509ac"
   type: CCF-A
 
 "IJCAI":
-  color: "#da70d6"
+  color: "#b509ac"
   type: CCF-A

@@ -66,12 +66,12 @@
               {%- if coauthor_url -%}
                 <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
               {%- else -%}
-                {%- if author.last == 'Zhiyong' -%}
+                {%- if author.first == 'Zhiyong' -%}
                   {%- if site.data.venues[entry.abbr].type == "Journal" -%}
                   <strong style="color:#4B66AD;border-bottom: 0px;">{{author.first}} {{author.last}}</strong>
                   <!-- <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}" style="color:white;border-bottom: 0px;">{{author.first}} {{author.last}}</a></abbr> -->
                   {%- else -%}
-                  <strong style="color:#da70d6;border-bottom: 0px;">{{author.first}} {{author.last}}</strong>
+                  <strong style="color:#b916b0;border-bottom: 0px;">{{author.first}} {{author.last}}</strong>
                   <!-- <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}" style="color:white;">{{author.first}} {{author.last}}</a></abbr> -->
                   {%- endif -%}
                 {%- else -%}
