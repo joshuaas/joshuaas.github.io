@@ -13,15 +13,26 @@
           {%- if site.data.venues[entry.abbr] -%}
             {%- assign venue_style = nil -%}
             {%- if site.data.venues[entry.abbr].color != blank -%}
-              {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
+              {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="width: 85px; background-color:' | append: '"' -%}
             {%- endif -%}
             <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
+            {%- if site.data.venues[entry.abbr].type == "Journal" -%}
+            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}" style="color:white;">IF:{{site.data.venues[entry.abbr].IF}}</a></abbr>
+            {%- else -%}
+            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}" style="color:white;">{{site.data.venues[entry.abbr].type}}</a></abbr>
+            {%- endif -%}
+
+            {%- if entry.awards -%}
+            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}">{{entry.awards}}</a></abbr>
+            {%- endif -%}
+            {%- if entry.rate -%}
+            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}">{{entry.rate}}</a></abbr>
+            {%- endif -%}
           {%- else -%}
             <abbr class="badge">{{entry.abbr}}</abbr>
           {%- endif -%}
         {%- endif -%}
         </div>
-
         <!-- Entry bib key -->
         <div id="{{entry.key}}" class="col-sm-8">
         {% if entry.type == "thesis" -%}
@@ -128,23 +139,8 @@
           {%- endif -%}
           {%- capture periodical -%}{{ entrytype }}{{ entrymonth }}{{ entryyear }}{%- endcapture -%}
           <div class="periodical">
-            {{ periodical | strip }} 
-            &nbsp;
-            {%- if site.data.venues[entry.abbr] -%}
-            {%- assign venue_style = nil -%}
-            {%- if site.data.venues[entry.abbr].color != blank -%}
-              {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
-            {%- endif -%}
-            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}" style="color:white;">{{entry.abbr}} {{ entry.year }}</a></abbr>
-            &nbsp;
-            {%- if site.data.venues[entry.abbr].type == "Journal" -%}
-            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}" style="color:white;">IF:{{site.data.venues[entry.abbr].IF}}</a></abbr>
-            {%- else -%}
-            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}" style="color:white;">{{site.data.venues[entry.abbr].type}}</a></abbr>
-            {%- endif -%}
-            {%- else -%}
-            <abbr class="badge" style="color:white;">{{entry.abbr}}</abbr>
-          {%- endif -%}
+            {{ periodical | strip }}, 
+            &nbsp;{{ entry.year }}
            <!-- &nbsp; {%- if entry.year -%} {{ entry.year }} {%- endif -%} -->
           </div>
         {%- endif %}
