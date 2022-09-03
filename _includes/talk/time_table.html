@@ -11,8 +11,12 @@
           {% endif %}
           <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
             {% if content.title %}
-            <div style="padding-left:15px;"><a class="title font-weight-bold"  href="{{ content.link }}">{{content.title}}, {{content.institution}}</a></div>
-            
+            <div style="padding-left:15px;">
+            <a class="title font-weight-bold"  href="{{ content.link }}">{{content.title}}, {{content.institution}}
+              {% if content.pdf %}
+              <a class="title font-weight-bold" href="{{ content.pdf }}">&nbsp; [pdf]</a>
+              {% endif %}
+            </a></div>
             {% endif %}
             {% if content.institution %}
             <!-- <h6 class="" style="font-size: 0.95rem;">{{content.institution}}</h6> -->
