@@ -23,9 +23,11 @@ table {
 
 a, table.table a {
   color: var(--global-theme-color);
+  font-weight: bold;
   &:hover {
     color: var(--global-theme-color);
     text-decoration: underline;
+    font-weight: bold;
   }
   &:hover:after :not(.nav-item.dropdown) {
     width: 100%;
