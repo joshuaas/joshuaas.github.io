@@ -16,8 +16,8 @@ awards: true
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
-titles: ['TPAMI', 'ICML', 'NeurIPS', 'CVPR', 'TIP', 'AAAI', 'MM' ]
-years: ['2022', '2021', '2020', '2019']
+titles: ['TPAMI', 'ICML', 'NeurIPS', 'CVPR', 'ICCV', 'TIP', 'AAAI', 'MM' ]
+years: ['2023', '2022', '2021', '2020', '2019']
 authors: ['Yang Zhiyong', 'Xu Qianqian', 'Bao Shilong', 'Wang Zitai', 'Wen Peisong', 'Shao Huiyang', 'Jiang Yangbangyan' ,'Ma Ke', 'Cao Tianwei', 'Hou Wenzheng', 'Cao Zongsheng', 'Hao Qianxiu', 'Jiang Xuan', 'Chen Junyu']
 ---
 
