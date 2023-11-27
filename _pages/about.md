@@ -2,7 +2,7 @@
 layout: about
 title: Home
 permalink: /
-subtitle: Postdoctoral Research Fellow 
+subtitle: Associate Professor (Tenure-track Assistant Professor) 
           <a href='https://scce.ucas.ac.cn/'>School of Computer Science and Technology, UCAS</a>. 
 
 profile:
