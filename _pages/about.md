@@ -22,3 +22,13 @@ authors: ['Yang Zhiyong', 'Xu Qianqian', 'Bao Shilong', 'Wang Zitai', 'Wen Peiso
 ---
 
 Hi! I'm Zhiyong Yang(杨智勇), an Associate Professor (Tenure-track Assistant Professor) with the School of Computer Science and Technology, University of Chinese Academy of Sciences. I got my Ph.D. degree from Institute of Information Engineering, Chinese Academy of Sciences (IIE, CAS) in 2021, supervised by Prof. [Qingming Huang](https://qmhuang-ucas.github.io/) (IEEE Fellow). I am also lucky to have opportunities to collaborate with [Qianqian Xu](https://qianqianxu010.github.io/) (Professor at ICT CAS), [Xiaochun Cao](http://people.ucas.ac.cn/~xiaochun) (Professor at Sun Yat-sen University, Shenzhen Compus, China), [Yuan Yao](https://yao-lab.github.io/) (Professor at HKUST), [Jiechao Xiong](https://scholar.google.com/citations?user=X8YIcKEAAAAJ&hl=zh-CN) (Research Fellow at Tencent Lab AI Lab), [Yuan Su](http://yuansu.me/) (Senior Researcher at Microsoft Quantum), [Ke Ma](https://www.researchgate.net/profile/Ke_Ma10) (postdoc at UCAS), [Yangbangyan Jiang](https://scholar.google.com/citations?user=h4Zm5d8AAAAJ&hl=zh-CN) (Ph.D. Student at IIE, CAS), and [Jingcheng Lu](https://www.linkedin.com/in/will-lu/) (Computer Science graduate student at UC Irvine).
+
+
+I'm especially interested in several fundamental problems in machine learning:
+
+- Decision Invariant Optimization (Xcurve Framework)
+- Trustworthy Machine Learning 
+- Long-tail Learning
+
+
+I'm always looking for highly self-motivated PhD/Master students! 
