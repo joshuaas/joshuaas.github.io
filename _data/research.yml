@@ -1,0 +1,107 @@
+
+- title: Talks
+  type: time_table
+  contents:
+    - title: TMLR Young Scientist Seminar@HKBU
+      description: 'Recently, machine learning and deep learning technologies have been successfully employed in many complicated high-stake decision-making applications such as disease prediction, fraud detection, outlier detection, and criminal justice sentencing. All these applications share a common trait known as risk-aversion in economics and finance terminologies. In other words, the decision-makers tend to have an extremely low risk tolerance. Under this context, the decision-makers will carefully choose their decision parameter to meet the specific requirement. Consequently, the decision parameters for train- and test- might be quite different. To mitigate the decision parameter shift problem,  I'm seeking for new decision-invariant machine learning machanisms , on top of which we develop a new framework called <a href="https://xcurveopt.github.io/">Xcurve</a>.'
+      items: 
+        - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Yuan He, Xiaochun Cao and Qingming Huang. Optimizing Two-way Partial AUC with an End-to-end Framework. TPAMI, 2022."
+        - "Wenzheng Hou, Qianqian Xu, Zhiyong Yang, Shilong Bao, Yuan He and Qingming Huang. AdAUC: End-to-end Adversarial AUC Optimization Against Long-tail Problems. ICML2022"
+        - "Shilong Bao, Qianqian Xu, Zhiyong Yang, Xiaochun Cao and Qingming Huang. Rethinking Collaborative Metric Learning: Toward an Efficient Alternative without Negative Sampling. IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI), 2021."
+      pdf: "/assets/img/talks/2022-HKBU-tmlr-yzy.pdf"
+    - title: AUC Optimization Under Complicate Scenarios
+      link: "https://www.techbeat.net/talk-info?id=605&utm_campaign=1201%E6%9D%A8%E6%99%BA%E5%8B%87&utm_medium=%E7%9F%A5%E4%B9%8E&utm_source=%E7%9F%A5%E4%B9%8E&gio_link_id=4PYqwOLP"
+      description: ''
+      items:
+        - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Yuan He, Xiaochun Cao and Qingming Huang. When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC. International Conference on Machine Learning (ICML), 11820–11829, 2021"
+        - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Xiaochun Cao and Qingming Huang. Learning with Multiclass AUC: Theory and Algorithms. IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2021. (Early Access)"
+    - title: "When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC"
+      link: "https://www.bilibili.com/video/BV1VQ4y1C75e?spm_id_from=333.999.0.0"
+      institution: 2021
+      pic: "/assets/img/talks/aitime.png"
+      year: AI Time
+      description: '
+                  The Area Under the ROC Curve (AUC) is a crucial metric for machine learning, which evaluates the average performance over all possible
+                  True Positive Rates (TPRs) and False Positive
+                  Rates (FPRs). Based on the knowledge that a
+                  skillful classifier should simultaneously embrace
+                  a high TPR and a low FPR, we turn to study a
+                  more general variant called Two-way Partial AUC
+                  (TPAUC), where only the region with TPR ≥
+                  α, FPR ≤ β is included in the area. Moreover, a
+                  recent work shows that the TPAUC is essentially
+                  inconsistent with the existing Partial AUC metrics
+                  where only the FPR range is restricted, opening
+                  a new problem to seek solutions to leverage high
+                  TPAUC. Motivated by this, we present the first
+                  trial in this paper to optimize this new metric. The
+                  critical challenge along this course lies in the difficulty of performing gradient-based optimization
+                  with end-to-end stochastic training, even with a
+                  proper choice of surrogate loss. To address this issue, we propose a generic framework to construct
+                  surrogate optimization problems, which supports
+                  efficient end-to-end training with deep-learning.
+                  Moreover, our theoretical analyses show that: 1)
+                  the objective function of the surrogate problems
+                  will achieve an upper bound of the original problem under mild conditions, and 2) optimizing the
+                  surrogate problems leads to good generalization
+                  performance in terms of TPAUC with a high probability. Finally, empirical studies over several
+                  benchmark datasets speak to the efficacy of our framework.
+                  '
+      items:
+        - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Yuan He, Xiaochun Cao and Qingming Huang. When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC. International Conference on Machine Learning (ICML), 11820–11829, 2021"
+    - title: "When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC (Long Talk 3%)"
+      link: "https://slideslive.com/38958537/when-all-we-need-is-a-piece-of-the-pie-a-generic-framework-for-optimizing-twoway-partial-auc?ref=speaker-22247"
+      institution: 2021
+      pic: "/assets/img/talks/icml.jpg"
+      year: ICML
+      description: '
+            The Area Under the ROC Curve (AUC) is a crucial metric for machine learning, which evaluates the average performance over all possible
+            True Positive Rates (TPRs) and False Positive
+            Rates (FPRs). Based on the knowledge that a
+            skillful classifier should simultaneously embrace
+            a high TPR and a low FPR, we turn to study a
+            more general variant called Two-way Partial AUC
+            (TPAUC), where only the region with TPR ≥
+            α, FPR ≤ β is included in the area. Moreover, a
+            recent work shows that the TPAUC is essentially
+            inconsistent with the existing Partial AUC metrics
+            where only the FPR range is restricted, opening
+            a new problem to seek solutions to leverage high
+            TPAUC. Motivated by this, we present the first
+            trial in this paper to optimize this new metric. The
+            critical challenge along this course lies in the difficulty of performing gradient-based optimization
+            with end-to-end stochastic training, even with a
+            proper choice of surrogate loss. To address this issue, we propose a generic framework to construct
+            surrogate optimization problems, which supports
+            efficient end-to-end training with deep-learning.
+            Moreover, our theoretical analyses show that: 1)
+            the objective function of the surrogate problems
+            will achieve an upper bound of the original problem under mild conditions, and 2) optimizing the
+            surrogate problems leads to good generalization
+            performance in terms of TPAUC with a high probability. Finally, empirical studies over several
+            benchmark datasets speak to the efficacy of our framework.
+            '
+      items:
+        - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Yuan He, Xiaochun Cao and Qingming Huang. When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC. International Conference on Machine Learning (ICML), 11820–11829, 2021"
+    - title: "DM2C: Deep Mixed-Modal Clustering (Spotlight 2.4%)"
+      link: "https://slideslive.com/38922303/track-1-session-3-spotlights?ref=speaker-22247"
+      institution: 2019
+      pic: "/assets/img/talks/nips.png"
+      year: NeurIPS
+      description: '
+                    Data exhibited with multiple modalities are ubiquitous in real-world clustering
+                    tasks. Most existing methods, however, pose a strong assumption that the pairing
+                    information for modalities is available for all instances. In this paper, we consider
+                    a more challenging task where each instance is represented in only one modality,
+                    which we call mixed-modal data. Without any extra pairing supervision across
+                    modalities, it is difficult to find a universal semantic space for all of them. To tackle
+                    this problem, we present an adversarial learning framework for clustering with
+                    mixed-modal data. Instead of transforming all the samples into a joint modalityindependent space, our framework learns the mappings across individual modality
+                    spaces by virtue of cycle-consistency. Through these mappings, we could easily
+                    unify all the samples into a single modality space and perform the clustering.
+                    Evaluations on several real-world mixed-modal datasets could demonstrate the
+                    superiority of our proposed framework.
+                  '
+      items:
+        - "Jiang, Yangbangyan, et al. Dm2c: Deep mixed-modal clustering. Advances in Neural Information Processing Systems 32 (2019)."
+    

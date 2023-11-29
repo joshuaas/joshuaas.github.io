@@ -30,4 +30,4 @@ I'm especially interested in several fundamental problems in machine learning:
 - <a style="color: #7da0b6; font-weight: bold;">Trustworthy Machine Learning</a> 
 - <a style="color: #7da0b6; font-weight: bold;">Long-tail Learning</a>
 
-<span style="color: red">I'm always looking for highly self-motivated PhD/Master students!</span> 
+<span style="color: #b509ac">I'm always looking for highly self-motivated PhD/Master students!</span> 
