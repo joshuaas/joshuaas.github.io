@@ -8,32 +8,8 @@ layout: default
             <h1 class="post-title">{{ page.title }}</h1>
           </header>
 
-          <h3 class="mt-4">I'm especially interested in several fundamental problems in machine learning:</h3>
-
-          <div class="card mt-3">
-            <div class="p-3">
-              <div class="row">
-                <div class="col-sm-10">
-                  <h5 class="font-weight-bold">Decision Invariant Optimization (Xcurve Framework)</h5>
-                </div>
-                <!-- <div class="col-sm-2 text-left text-sm-right">
-                  <a class="badge font-weight-bold light-blue darken-1 text-uppercase align-middle" href="https://people.eecs.berkeley.edu/~anca/AHRI.html" target="_blank">
-                      CS 287H
-                  </a>
-                </div> -->
-              </div>
-              <!-- <h6 class="font-italic mt-2 mt-sm-0">Spring 2021: Graduate Student Instructor</h6> -->
-              <ul class="card-text font-weight-light list-group list-group-flush">
-                <p>
-                  Recently, machine learning and deep learning technologies have been successfully employed in many complicated high-stake decision-making applications such as disease prediction, fraud detection, outlier detection, and criminal justice sentencing. All these applications share a common trait known as risk-aversion in economics and finance terminologies. In other words, the decision-makers tend to have an extremely low risk tolerance. Under this context, the decision-makers will carefully choose their decision parameter to meet the specific requirement. Consequently, the decision parameters for train- and test- might be quite different. To mitigate the decision parameter shift problem,  I'm seeking for new decision-invariant machine learning machanisms , on top of which we develop a new framework called <a href="https://xcurveopt.github.io/">Xcurve</a>.
-                </p>
-
-                <p>
-                  The goal of X-curve learning is to learn high-quality models that can adapt to different decision conditions. Inspired by the fundamental principle of the well-known AUC optimization, our library provides a systematic solution to optimize the area under different kinds of performance curves. To be more specific, the performance curve is formed by a plot of two performance functions $x(\lambda)$, $y(\lambda)$ of decision parameter $\lambda$. The area under a performance curve becomes the integral of the performance over all possible choices of different decision conditions. In this way, the learning systems are only required to optimize a decision-invariant metric to avoid the risk aversion issue
-                </p>
-
-              </ul>
-            </div>
-          </div>
+          <article>
+            {{ content }}
+          </article>
 
         </div>
