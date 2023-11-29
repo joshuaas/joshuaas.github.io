@@ -26,8 +26,8 @@ Hi! I'm Zhiyong Yang(杨智勇), an Associate Professor (Tenure-track Assistant 
 
 I'm especially interested in several fundamental problems in machine learning:
 
-- Decision Invariant Optimization (Xcurve Framework)
-- Trustworthy Machine Learning 
-- Long-tail Learning
+- <span style="color: blue">Decision Invariant Optimization (Xcurve Framework)</span>
+- <span style="color: blue">Trustworthy Machine Learning</span> 
+- <span style="color: blue">Long-tail Learning</span>
 
-I'm always looking for highly self-motivated PhD/Master students! 
+<span style="color: red">I'm always looking for highly self-motivated PhD/Master students!</span> 

@@ -14,11 +14,11 @@ I'm especially interested in several fundamental problems in machine learning:
 
     The goal of X-curve learning is to learn high-quality models that can adapt to different decision conditions. Inspired by the fundamental principle of the well-known AUC optimization, our library provides a systematic solution to optimize the area under different kinds of performance curves. To be more specific, the performance curve is formed by a plot of two performance functions $$x(\lambda)$$, $$y(\lambda)$$ of decision parameter $$\lambda$$. The area under a performance curve becomes the integral of the performance over all possible choices of different decision conditions. In this way, the learning systems are only required to optimize a decision-invariant metric to avoid the risk aversion issue
 
-    <img src=/assets/img/xcurve.png width=90%>
+    ![xcurve](/assets/img/xcurve.png){:width=90%}
 
     Four Kinds of Performance Curves
 
-    <img src=/assets/img/xcurve-insight.png width=90%>
+    ![xcurve-insight](/assets/img/xcurve-insight.png){:width=90%}
 
 - Trustworthy Machine Learning 
 
