@@ -8,15 +8,13 @@ layout: default
 
     <article>
       <div class="cv">
-        {% for entry in site.data.research %}
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
-            <div>
-              {% include research.html %}
-            </div>
+        <div class="card mt-3 p-3">
+          <h3 class="card-title font-weight-medium">Research</h3>
+          <div>
+            {% include research.html %}
           </div>
-        {% endfor %}
         </div>
+      </div>
     </article>
 
   </div>
