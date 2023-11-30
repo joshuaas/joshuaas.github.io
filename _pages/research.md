@@ -4,6 +4,7 @@ permalink: /research/
 title: Research
 nav: true
 nav_order: 3
+paper_titles_partial: ['When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC', 'Optimizing Two-way Partial AUC with an End-to-end Framework', 'Asymptotically Unbiased Instance-wise Regularized Partial AUC Optimization: Theory and Algorithm']
 ---
 
 I'm especially interested in several fundamental problems in machine learning:
