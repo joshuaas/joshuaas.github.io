@@ -2,7 +2,7 @@
     {%- for t in include.paper_titles %}
         {%- for author in page.authors %}
             {%- for y in page.years %}
-                {% bibliography -f papers -q @*[ title={{t}}* %}
+                {% bibliography -f papers -q @*[title={{t}}] %}
             {% endfor %}
         {% endfor %}
     {% endfor %}
