@@ -15,7 +15,14 @@
             {%- if site.data.venues[entry.abbr].color != blank -%}
               {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="width: 85px; background-color:' | append: '"' -%}
             {%- endif -%}
-            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
+
+            {% if venue_style %}
+              <abbr class="badge" {{venue_style}}><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
+            {% else %}
+              <abbr class="badge" {{venue_style}}><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
+            {% endif %}
+
+            
             {%- if site.data.venues[entry.abbr].type == "Journal" -%}
             <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}" style="color:white;">IF:{{site.data.venues[entry.abbr].IF}}</a></abbr>
             {%- else -%}
