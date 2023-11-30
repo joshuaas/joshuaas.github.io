@@ -13,7 +13,7 @@
           {%- if site.data.venues[entry.abbr] -%}
             {%- assign venue_style = nil -%}
             {%- if site.data.venues[entry.abbr].color != blank -%}
-              {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="width: 85px; background-color:' | append: '"' -%}
+              {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="width: 85px; background-color:' | append: ' !important;"' -%}
             {%- endif -%}
 
             {% if venue_style %}
