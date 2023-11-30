@@ -307,8 +307,8 @@ footer.sticky-bottom {
       background-color: inherit;
 
       .badge {
-        color: var(--global-card-bg-color) !important;
-        background-color: var(--global-theme-color) !important;
+        color: var(--global-card-bg-color);
+        background-color: var(--global-theme-color);
       }
     }
   }
