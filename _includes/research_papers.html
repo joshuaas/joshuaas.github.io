@@ -1,5 +1,7 @@
 <div class="publications">
     {% for t in include.paper_titles %}
-        {% bibliography -f papers -q @*[title={{t}}] %}
+        {% for abbr in page.types %}
+            {% bibliography -f papers -q @*[title={{t}} && abbr={{abbr}}]* %}
+        {% endfor %}
     {% endfor %}
 </div>

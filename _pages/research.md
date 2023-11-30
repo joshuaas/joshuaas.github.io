@@ -4,7 +4,10 @@ permalink: /research/
 title: Research
 nav: true
 nav_order: 3
+types: ['TPAMI', 'ICML', 'NeurIPS', 'CVPR', 'ICCV', 'TIP', 'AAAI', 'MM' ]
 paper_titles_partial: ['When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC', 'Optimizing Two-way Partial AUC with an End-to-end Framework', 'Asymptotically Unbiased Instance-wise Regularized Partial AUC Optimization: Theory and Algorithm']
+paper_titles_multiclass: ['Learning with Multiclass AUC: Theory and Algorithms']
+paper_titles_generalized: ['Weighted ROC Curve in Cost Space: Extending AUC to Cost-Sensitive Learning']
 ---
 
 I'm especially interested in several fundamental problems in machine learning:
