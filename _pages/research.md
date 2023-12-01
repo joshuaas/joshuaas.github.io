@@ -8,6 +8,14 @@ types: ['TPAMI', 'ICML', 'NeurIPS', 'CVPR', 'ICCV', 'TIP', 'AAAI', 'MM' ]
 paper_titles_partial: ['When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC', 'Optimizing Two-way Partial AUC with an End-to-end Framework', 'Asymptotically Unbiased Instance-wise Regularized Partial AUC Optimization: Theory and Algorithm']
 paper_titles_multiclass: ['Learning with Multiclass AUC: Theory and Algorithms']
 paper_titles_generalized: ['Weighted ROC Curve in Cost Space: Extending AUC to Cost-Sensitive Learning']
+paper_titles_metric: ['Rethinking Label Flipping Attack: From Sample Masking to Sample Thresholding', 'The Minority Matters: A Diversity-Promoting Collaborative Metric Learning Algorithm']
+paper_titles_auprc: ['Exploring the Algorithm-Dependent Generalization of AUPRC Optimization with List Stability']
+paper_titles_autkc: ['Optimizing Partial Area Under the Top-k Curve: Theory and Practice']
+paper_titles_openauc: ['OpenAUC: Towards AUC-Oriented Open-Set Recognition']
+paper_titles_long_tail: ['A Unified Generalization Analysis of Re-Weighting and Logit-Adjustment for Imbalanced Learning', 'Learning with Multiclass AUC: Theory and Algorithms', 'When All We Need is a Piece of the Pie: A Generic Framework for Optimizing Two-way Partial AUC']
+paper_titles_robust: ['AdAUC: End-to-end Adversarial AUC Optimization Against Long-tail Problems', 'Revisiting AUC-oriented Adversarial Training with Loss-Agnostic Perturbations']
+paper_titles_domain_adaptation: ['AUC-Oriented Domain Adaptation: From Theory to Algorithm']
+paper_titles_openset: ['OpenAUC: Towards AUC-Oriented Open-Set Recognition']
 ---
 
 I'm especially interested in several fundamental problems in machine learning:

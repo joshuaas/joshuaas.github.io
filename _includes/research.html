@@ -3,11 +3,6 @@
     <ul class="card-text font-weight-light list-group list-group-flush">
       <li class="list-group-item">
         <div class="row">
-          <!-- <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="width: 75px;">
-            <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px;">
-              Xcurve
-            </span>
-          </div> -->
           
           <div class="col-xs-12 cl-sm-12 col-md-12 mt-2 mt-md-0">
             <div style="padding-left:15px;">
@@ -15,9 +10,6 @@
                 Decision Invariant Optimization (Xcurve Framework)
               </a>
             </div>
-  
-            <!-- <div style="margin-top:20px;margin-bottom:20px;padding-left:15px;"><img src="{{ content.pic }}" class="col-md-10" style="padding-left:0px;"/></div> -->
-            
             
             <p class="col-md-12" style="text-align:justify; margin-top: 20px;">
               Recently, machine learning and deep learning technologies have been successfully employed in many complicated high-stake decision-making applications such as disease prediction, fraud detection, outlier detection, and criminal justice sentencing. All these applications share a common trait known as risk-aversion in economics and finance terminologies. In other words, the decision-makers tend to have an extremely low risk tolerance. Under this context, the decision-makers will carefully choose their decision parameter to meet the specific requirement. Consequently, the decision parameters for train- and test- might be quite different. To mitigate the decision parameter shift problem,  I'm seeking for new decision-invariant machine learning machanisms , on top of which we develop a new framework called <a href="https://xcurveopt.github.io/">Xcurve</a>
@@ -40,7 +32,7 @@
                 <span class="item-title">AUROC</span>
                 <ul class="subitems">
                   <li>
-                    <span class="subitem">Partial performance constraints(only focus on subset of TPR, FPR)</span>
+                    <span class="subitem">Partial performance constraints (only focus on subset of TPR, FPR)</span>
                     
                     {% include research_papers.html paper_titles=page.paper_titles_partial %}
 
@@ -67,11 +59,44 @@
                   <li>
                     <span class="subitem">AUROC-inspired metric learning</span>  
                     
-                    {% include research_papers.html paper_titles=page.paper_titles_generalized %}
+                    {% include research_papers.html paper_titles=page.paper_titles_metric %}
                   </li>
                 </ul>
-
               </li>
+
+              <li>
+                <span class="item-title">AUPRC</span>
+                <ul class="subitems">
+                  <li>
+                    
+                    {% include research_papers.html paper_titles=page.paper_titles_auprc %}
+
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <span class="item-title">AUTKC (performance-curve metric for top-k classification)</span>
+                <ul class="subitems">
+                  <li>
+                    
+                    {% include research_papers.html paper_titles=page.paper_titles_autkc %}
+
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <span class="item-title">OpenAUC (performance-curve metric for OOD learning)</span>
+                <ul class="subitems">
+                  <li>
+                  
+                    {% include research_papers.html paper_titles=page.paper_titles_openauc %}
+                  
+                  </li>
+                </ul>
+              </li>
+
             </ul>
             
           </div>
@@ -80,27 +105,53 @@
 
       <li class="list-group-item">
         <div class="row">
-          <!-- <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="width: 75px;">
-            <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px;">
-              Xcurve
-            </span>
-          </div> -->
           
           <div class="col-xs-12 cl-sm-12 col-md-12 mt-2 mt-md-0">
             <div style="padding-left:15px;">
               <a class="title font-weight-bold" style="color: #7da0b6;">
                 Trustworthy Machine Learning 
               </a>
-            </div>
-  
-            <!-- <div style="margin-top:20px;margin-bottom:20px;padding-left:15px;"><img src="{{ content.pic }}" class="col-md-10" style="padding-left:0px;"/></div> -->
-            
+            </div>          
             
             <p class="col-md-12" style="text-align:justify; margin-top: 20px;">
               We are seeking for new principled method to make the current machine learning system trustworthy (e.g. Robustness against Adversarial attacks, OOD examples). On top of Xcurve, I'm especially interested in  (a) how to design performance-based metrics for trustworthy machine learning, and (b) how to use the SOTA models and idea of trustworthy machine learning to improve the Xcurve Framework. 
             </p>
-            
-            <!-- <div style="margin-top:20px;margin-bottom:20px;display: flex; justify-content: center;"><img src="/assets/img/xcurve.png" class="col-md-12"/></div> -->
+
+            <ul class="items col-md-12">
+              <li>
+                <span class="item-title">Adversarial Robustness for Xcurve</span>
+                <ul class="subitems">
+                  <li>
+                    
+                    {% include research_papers.html paper_titles=page.paper_titles_robust %}
+
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <span class="item-title">Domain Adaptation for Xcurve</span>
+                <ul class="subitems">
+                  <li>
+                    
+                    {% include research_papers.html paper_titles=page.paper_titles_domain_adaptation %}
+
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <span class="item-title">Xcurve Metrics for Openset Recognition</span>
+                <ul class="subitems">
+                  <li>
+                    
+                    {% include research_papers.html paper_titles=page.paper_titles_openset %}
+
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
             
           </div>
         </div>
@@ -108,11 +159,6 @@
 
       <li class="list-group-item">
         <div class="row">
-          <!-- <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="width: 75px;">
-            <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px;">
-              Xcurve
-            </span>
-          </div> -->
           
           <div class="col-xs-12 cl-sm-12 col-md-12 mt-2 mt-md-0">
             <div style="padding-left:15px;">
@@ -121,14 +167,19 @@
               </a>
             </div>
   
-            <!-- <div style="margin-top:20px;margin-bottom:20px;padding-left:15px;"><img src="{{ content.pic }}" class="col-md-10" style="padding-left:0px;"/></div> -->
-            
-            
             <p class="col-md-12" style="text-align:justify; margin-top: 20px;">
               Long-tail learning is one of the most challenging problems in machine learning, which aims to train well-performing models from a large number of examples that follow a highly imbalanced class distribution. We find that the long-tail problem could be mitigated by adjusting the optimal decision rule. On top of the Xcurve framework, we are interested in (a) how to design distribution-invariant metrics for long-tail learning to deal with different long-tail distributions, and (b) how to directly optimize such metrics efficiently. 
             </p>
-            
-            <!-- <div style="margin-top:20px;margin-bottom:20px;display: flex; justify-content: center;"><img src="/assets/img/xcurve.png" class="col-md-12"/></div> -->
+
+            <li>
+              <ul class="subitems">
+                <li>
+                  
+                  {% include research_papers.html paper_titles=page.paper_titles_long_tail %}
+
+                </li>
+              </ul>
+            </li>
             
           </div>
         </div>
