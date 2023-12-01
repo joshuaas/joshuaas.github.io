@@ -30,48 +30,39 @@
             <ul class="items col-md-12">
               <li>
                 <span class="item-title">AUROC</span>
-                <!-- <ul class="subitems"> -->
-                  <!-- <li> -->
-                    <details class="offset-md-1">
-                      <summary>
-                        <span class="subitem">Partial performance constraints (only focus on subset of TPR, FPR)</span>
-                      </summary>
-                      
-                      {% include research_papers.html paper_titles=page.paper_titles_partial %}
-                    </details>
-                  <!-- </li> -->
-                <!-- </ul> -->
-
-                <!-- <ul class="subitems"> -->
-                  <!-- <li> -->
-                    <details>
-                      <summary>
-                        <span class="subitem">Multiclass extension</span>  
-                      </summary>
-                      
-                      {% include research_papers.html paper_titles=page.paper_titles_multiclass %}
-
-                    </details>
-                    
-                  <!-- </li> -->
-                <!-- </ul> -->
-
-                <!-- <ul class="subitems">
-                  <li>
+                
+                <details class="offset-md-1">
+                  <summary>
+                    <span class="subitem">Partial performance constraints (only focus on subset of TPR, FPR)</span>
+                  </summary>
+                  
+                  {% include research_papers.html paper_titles=page.paper_titles_partial %}
+                </details>
+                
+                <details class="offset-md-1">
+                  <summary>
+                    <span class="subitem">Multiclass extension</span>  
+                  </summary>
+                  
+                  {% include research_papers.html paper_titles=page.paper_titles_multiclass %}
+                </details>
+                
+                <details class="offset-md-1"> 
+                  <summary>
                     <span class="subitem">Generalized AUC with non-uniform cost/threshold distribution</span>  
-                    
-                    {% include research_papers.html paper_titles=page.paper_titles_generalized %}
-                  </li>
-                </ul>
+                  </summary>
 
-                <ul class="subitems">
-                  <li>
+                  {% include research_papers.html paper_titles=page.paper_titles_generalized %}
+                </details>
+
+                <details class="offset-md-1">
+                  <summary>
                     <span class="subitem">AUROC-inspired metric learning</span>  
+                  </summary>
+                  
+                  {% include research_papers.html paper_titles=page.paper_titles_metric %}
+                </details>
                     
-                    {% include research_papers.html paper_titles=page.paper_titles_metric %}
-                  </li>
-                </ul> -->
-              
               </li>
 
               <li>
