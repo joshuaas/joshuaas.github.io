@@ -68,7 +68,7 @@
               <li>
                 <span class="item-title">AUPRC</span>
 
-                <details>
+                <details class="offset-md-1">
                   <summary>
                     <span class="subitem">List</span>
                   </summary>
@@ -81,7 +81,7 @@
               <li>
                 <span class="item-title">AUTKC (Performance-Curve Metric for Top-K Classification)</span>
 
-                <details>
+                <details class="offset-md-1">
                   <summary>
                     <span class="subitem">List</span>
                   </summary>
@@ -94,7 +94,7 @@
               <li>
                 <span class="item-title">OpenAUC (Performance-Curve Metric for OOD Learning)</span>
 
-                <details>
+                <details class="offset-md-1">
                   <summary>
                     <span class="subitem">List</span>
                   </summary>
@@ -126,35 +126,40 @@
             <ul class="items col-md-12">
               <li>
                 <span class="item-title">Adversarial Robustness for Xcurve</span>
-                <ul class="subitems">
-                  <li>
-                    
-                    {% include research_papers.html paper_titles=page.paper_titles_robust %}
 
-                  </li>
-                </ul>
+                <details class="offset-md-1">
+                  <summary>
+                    <span class="subitem">List</span>
+                  </summary>
+
+                  {% include research_papers.html paper_titles=page.paper_titles_robust %}
+                </details>
               </li>
 
               <li>
                 <span class="item-title">Domain Adaptation for Xcurve</span>
-                <ul class="subitems">
-                  <li>
-                    
-                    {% include research_papers.html paper_titles=page.paper_titles_domain_adaptation %}
+                
+                <details class="offset-md-1">
+                  <summary>
+                    <span class="subitem">List</span>
+                  </summary>
 
-                  </li>
-                </ul>
+                  {% include research_papers.html paper_titles=page.paper_titles_domain_adaptation %}
+                </details>
+                
               </li>
 
               <li>
                 <span class="item-title">Xcurve Metrics for Openset Recognition</span>
-                <ul class="subitems">
-                  <li>
-                    
-                    {% include research_papers.html paper_titles=page.paper_titles_openset %}
 
-                  </li>
-                </ul>
+                <details class="offset-md-1">
+                  <summary>
+                    <span class="subitem">List</span>
+                  </summary>
+
+                  {% include research_papers.html paper_titles=page.paper_titles_openset %}
+                </details>
+
               </li>
             </ul>
             
