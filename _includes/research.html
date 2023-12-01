@@ -67,13 +67,15 @@
 
               <li>
                 <span class="item-title">AUPRC</span>
-                <ul class="subitems">
-                  <li>
-                    
-                    {% include research_papers.html paper_titles=page.paper_titles_auprc %}
 
-                  </li>
-                </ul>
+                <details>
+                  <summary>
+                    <span class="subitem">List</span>
+                  </summary>
+
+                  {% include research_papers.html paper_titles=page.paper_titles_auprc %}
+                </details>
+                
               </li>
 
               <li>
