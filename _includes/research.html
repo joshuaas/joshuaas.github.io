@@ -184,13 +184,15 @@
             <ul class="items col-md-12">
               <li>
                 <span class="item-title">Long-tail Learning</span>
-                <ul class="subitems">
-                  <li>
-                    
-                    {% include research_papers.html paper_titles=page.paper_titles_long_tail %}
 
-                  </li>
-                </ul>
+                <details class="offset-md-1">
+                  <summary>
+                    <span class="subitem">List</span>
+                  </summary>
+                  
+                  {% include research_papers.html paper_titles=page.paper_titles_long_tail %}
+                </details>
+
               </li>
             </ul>
 
