@@ -7,9 +7,6 @@
       pic: "/assets/img/talks/ccf.jpg"
       institution: 2023
       link: "https://dl.ccf.org.cn/video/videoDetail.html?_ack=1&id=6806136447944704"
-      items: 
-        - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Yuan He, Xiaochun Cao and Qingming Huang. Optimizing Two-way Partial AUC with an End-to-end Framework. TPAMI, 2022."
-        - "Shao, Huiyang, Qianqian Xu, Zhiyong Yang, Peisong Wen, Peifeng Gao and Qingming Huang. Weighted roc curve in cost space: Extending auc to cost-sensitive learning. Advances in Neural Information Processing Systems, 2023."
     - title: "Efficient Partial AUC: Optimization Algorithm and Theory"
       year: TechBeat
       pic: "/assets/img/talks/TechBeat_Partial_AUC.png"
