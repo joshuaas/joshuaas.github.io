@@ -2,6 +2,15 @@
 - title: Talks
   type: time_table
   contents:
+    - title: "From AUC Optimization to XCurve: A Study of Decision-invariant Learning"
+      year: CCF
+      pic: "/assets/img/talk/ccf.png"
+      instituion: 2023
+      items: 
+        - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Yuan He, Xiaochun Cao and Qingming Huang. Optimizing Two-way Partial AUC with an End-to-end Framework. TPAMI, 2022."
+        - "Shao, Huiyang, et al. Weighted roc curve in cost space: Extending auc to cost-sensitive learning. Advances in Neural Information Processing Systems 36 (2024)."
+      
+
     - title: TMLR Young Scientist Seminar@HKBU
       year: HKBU
       pic: "/assets/img/talks/HKBU.png"
