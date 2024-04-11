@@ -5,12 +5,21 @@
     - title: "From AUC Optimization to XCurve: A Study of Decision-invariant Learning"
       year: CCF
       pic: "/assets/img/talks/ccf.png"
-      instituion: 2023
+      institution: 2023
       items: 
         - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Yuan He, Xiaochun Cao and Qingming Huang. Optimizing Two-way Partial AUC with an End-to-end Framework. TPAMI, 2022."
-        - "Shao, Huiyang, et al. Weighted roc curve in cost space: Extending auc to cost-sensitive learning. Advances in Neural Information Processing Systems 36 (2024)."
-      
-
+        - "Shao, Huiyang, Qianqian Xu, Zhiyong Yang, Peisong Wen, Peifeng Gao and Qingming Huang. Weighted roc curve in cost space: Extending auc to cost-sensitive learning. Advances in Neural Information Processing Systems, 2023."
+    - title: "Efficient Partial AUC: Optimization Algorithms and Theory"
+      year: TechBeat
+      pic: "/assets/img/talks/TechBeat_Partial_AUC.png"
+      institution: 2023
+      items:
+        - "Zhiyong Yang, Qianqian Xu, Shilong Bao, Yuan He, Xiaochun Cao and Qingming Huang. Optimizing Two-way Partial AUC with an End-to-end Framework. TPAMI, 2022."
+        - "Huiyang Shao, Qianqian Xu, Zhiyong Yang, Shilong Bao, Qingming Huang. Asymptotically Unbiased Instance-wise Regularized Partial AUC Optimization: Theory and Algorithm. NeurIPS, 2022."
+    - title: "The 19th Young Scientists Conference of The China Society of Image and Graphics"
+      year: CSIG
+      pic: "/assets/img/talks/CSIG.png"
+      institution: 2023
     - title: TMLR Young Scientist Seminar@HKBU
       year: HKBU
       pic: "/assets/img/talks/HKBU.png"
