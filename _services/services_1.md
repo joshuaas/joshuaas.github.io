@@ -7,6 +7,9 @@ inline: true
 ---
 
 <tr> <th scope="row"> </th> <td style="width:100px;">
+<div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#b509ac;"><a href="" style="color:white;">NeurIPS</a></abbr></div>
+</td><td>Area Chair (2024)</td></tr>
+<tr> <th scope="row"> </th> <td style="width:100px;">
 <div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#b509ac;"><a href="" style="color:white;">ICML</a></abbr></div>
 </td><td>PC Member (2019, 2020, 2021, 2022)</td></tr>
 <tr> <th scope="row"> </th> <td style="width:100px;">
