@@ -173,9 +173,6 @@
             <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
             {%- endif %}
           {%- endif %}
-          {%- if entry.project %}
-            <a href="{{ entry.project }}" class="btn btn-sm z-depth-0" role="button">Project</a>
-          {%- endif %}
           {%- if entry.supp %}
             {% if entry.supp contains '://' -%}
             <a href="{{ entry.supp }}" class="btn btn-sm z-depth-0" role="button">Supp</a>
@@ -188,6 +185,9 @@
           {%- endif %}
           {%- if entry.code %}
             <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+          {%- endif %}
+          {%- if entry.project %}
+            <a href="{{ entry.project }}" class="btn btn-sm z-depth-0" role="button">Project</a>
           {%- endif %}
           {%- if entry.poster %}
             {% if entry.poster contains '://' -%}
