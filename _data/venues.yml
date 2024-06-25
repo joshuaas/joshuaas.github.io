@@ -15,6 +15,11 @@
   type: Journal
   IF: 11.041
 
+"IJCV":
+  color: "#4B66AD"
+  type: Journal
+  IF: 11.6
+
 "ICML":
   color: "#b509ac"
   type: CCF-A
@@ -43,7 +48,3 @@
   color: "#b509ac"
   type: CCF-A
 
-"IJCV":
-  color: "#4B66AD"
-  type: Journal
-  IF: 11.6
