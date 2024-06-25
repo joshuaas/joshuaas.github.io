@@ -42,3 +42,8 @@
 "IJCAI":
   color: "#b509ac"
   type: CCF-A
+
+"IJCV":
+  color: "#4B66AD"
+  type: Journal
+  IF: 11.6
