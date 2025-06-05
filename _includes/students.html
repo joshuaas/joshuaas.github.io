@@ -1,0 +1,22 @@
+          
+          <div class="news">
+            <!-- <h2 style="border-bottom: 1.5px solid rgba(0, 0, 0, 0.1); padding-bottom: 10px;"><strong>Services</strong></h2> -->
+            <h2 style="border-bottom: 1.5px solid rgba(0, 0, 0, 0.1); padding-bottom: 10px;"></h2>
+            {% if site.students != blank -%} 
+            {%- assign students_size = site.students | size -%}
+            <div class="table-responsive">
+              <table class="table table-sm table-borderless">
+              {%- assign students = site.students | reverse -%}
+              {% for item in students limit: students_limit %} 
+                <tr>
+                  <th colspan="3" scope="row" style="font-size:20px; font-weight:bold;">{{ item.type| date: "%b %-d, %Y" }}</th>
+                  <td></td>
+                </tr>
+                {{ item.content }}
+              {%- endfor %} 
+              </table>
+            </div>
+          {%- else -%} 
+            <p>No awards so far...</p>
+          {%- endif %} 
+          </div>

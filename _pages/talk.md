@@ -3,5 +3,5 @@ layout: talk
 permalink: /talk/
 title: Talks
 nav: true
-nav_order: 7
+nav_order: 8
 ---

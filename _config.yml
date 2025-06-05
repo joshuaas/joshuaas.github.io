@@ -141,6 +141,11 @@ collections:
       layout: post
     output: true
     permalink: /services/:path/
+  students:
+    defaults:
+      layout: post
+    output: true
+    permalink: /students/:path/
   projects:
     output: true
     permalink: /projects/:path/
