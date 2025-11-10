@@ -18,7 +18,7 @@ inline: true
 <tr>
     <td><div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#2698BA;"><div style="color:white;">Ph.D.</div></abbr></div></td>
     <td>韩博宇</td>
-    <td>1*NeurIPS</td>
+    <td>2*NeurIPS</td>
 </tr>
 <tr>
     <td><div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#2698BA;"><div style="color:white;">Ph.D.</div></abbr></div></td>
