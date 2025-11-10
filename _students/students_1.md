@@ -43,7 +43,7 @@ inline: true
 <tr>
     <td><div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#0076df;"><div style="color:white;">Master</div></abbr></div></td>
     <td>雷祺丰</td>
-    <td></td>
+    <td>1*AAAI</td>
 </tr>
 <tr>
     <td><div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#0076df;"><div style="color:white;">Master</div></abbr></div></td>
