@@ -7,7 +7,7 @@ inline: true
 ---
 <tr> <th scope="row"> </th> <td style="width:100px;">
 <div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#b509ac;"><a href="" style="color:white;">ICML</a></abbr></div>
-</td><td><span style="color:#b509ac;">Area Chair</span> (2025)</td></tr>
+</td><td><span style="color:#b509ac;">Area Chair</span> (2025, 2026)</td></tr>
 <tr> <th scope="row"> </th> <td style="width:100px;">
 <div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#b509ac;"><a href="" style="color:white;">ICLR</a></abbr></div>
 </td><td><span style="color:#b509ac;">Area Chair</span> (2025, 2026)</td></tr>
