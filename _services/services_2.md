@@ -5,6 +5,9 @@ inline: true
 ---
 
 <tr> <th scope="row"> </th> <td>
+<div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#4B66AD;"><a href="" style="color:white;">Information Fusion</a></abbr></div>
+</td> <td>Information Fusion: <span style="color:#4B66AD;">Area Editor</span></td></tr>
+<tr> <th scope="row"> </th> <td>
 <div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#4B66AD;"><a href="" style="color:white;">Neural Netw.</a></abbr></div>
 </td> <td>Neural Networks: <span style="color:#4B66AD;">Action Editor</span></td></tr>
 <tr> <th scope="row"> </th> <td>
