@@ -13,6 +13,8 @@ inline: true
 <tr> <th scope="row"> </th> <td>
 <div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#4B66AD;"><a href="" style="color:white;">Pattern Recognit.</a></abbr></div>
 </td> <td>Pattern Recognition: <span style="color:#4B66AD;">Associate Editor</span></td></tr>
+<div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#4B66AD;"><a href="" style="color:white;">TMLR</a></abbr></div>
+</td> <td>Transactions on Machine Learning Research: <span style="color:#4B66AD;">Action Editor</span></td></tr>
 <tr> <th scope="row"> </th> <td>
 <div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#4B66AD;"><a href="" style="color:white;">TIP</a></abbr></div>
 </td> <td>IEEE Transactions on Image Processing (T-IP): Reviewer</td></tr>
