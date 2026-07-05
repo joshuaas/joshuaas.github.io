@@ -62,4 +62,15 @@ html[data-theme='dark'] {
   .repo-img-dark {
     display: block;
   }
+
+  .student-award-tag {
+    background-color: rgba(210, 170, 80, 0.1);
+    color: #d4a44a;
+    border-color: rgba(210, 170, 80, 0.25);
+  }
+
+  .student-pub-tag {
+    background-color: rgba(38, 152, 186, 0.12);
+    border-color: rgba(38, 152, 186, 0.3);
+  }
 }
