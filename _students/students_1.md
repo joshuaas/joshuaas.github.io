@@ -1,6 +1,6 @@
 ---
 layout: post
-type: 已毕业（协助指导/指导）
+type: 已毕业（协助指导）
 inline: true
 students:
   - name: 包世龙
@@ -8,13 +8,13 @@ students:
     identity: 中国科学院大学 博士后/特别研究助理
     awards:
       - 北京图象图形学学会优博
-      - 国家奖学金
+      - ACM China 优博提名
   - name: 王子泰
     photo: https://wang22ti.com/images/zitai-26-small.jpg
     identity: 中国科学院计算技术研究所 博士后/特别研究助理
     awards:
       - 博新计划博士后
-      - 国家奖学金
+      - 中国图像图形学会优博
   - name: 曹天伟
     photo: 
     identity: 北京邮电大学 博士后

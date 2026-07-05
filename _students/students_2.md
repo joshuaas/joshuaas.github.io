@@ -59,11 +59,6 @@ students:
     identity: Master
     publications:
       - ICML×2
-  - name: 黄一航
-    pinyin: Huang Yihang
-    photo:
-    identity: Master
-    publications: []
   - name: 钟玉杰
     pinyin: Zhong Yujie
     photo:
