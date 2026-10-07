@@ -180,22 +180,6 @@
   Array.prototype.forEach.call(document.querySelectorAll("[data-tabset]"), initializeTabs);
   document.documentElement.classList.add("course-ready");
 
-  var logo = document.querySelector(".course-logo");
-  var wordmark = document.querySelector(".logo-wordmark");
-  if (logo && wordmark) {
-    var narrowScreen = window.matchMedia("(max-width: 760px)");
-    function arrangeLogo() {
-      logo.setAttribute("viewBox", narrowScreen.matches ? "0 0 660 760" : "0 0 1450 600");
-      var position = narrowScreen.matches ? [15, 540, 630, 210] : [700, 130, 720, 300];
-      ["x", "y", "width", "height"].forEach(function (attribute, index) {
-        wordmark.setAttribute(attribute, position[index]);
-      });
-    }
-    arrangeLogo();
-    if (narrowScreen.addEventListener) narrowScreen.addEventListener("change", arrangeLogo);
-    else narrowScreen.addListener(arrangeLogo);
-  }
-
   var hero = document.querySelector(".course-hero");
   if ("IntersectionObserver" in window && hero) {
     new IntersectionObserver(function (entries) {

@@ -45,8 +45,12 @@ html[data-theme="dark"] .teaching-content {
 .teaching-content .hero-copy { display: contents; }
 .teaching-content #course-title { grid-row: 2; font-size: clamp(40px, 4.7vw, 64px); font-weight: 600; line-height: 1.3; letter-spacing: -.045em; white-space: nowrap; animation: course-arrive .8s both; }
 .teaching-content .hero-art { grid-row: 1; width: min(850px, 90%); animation: course-logo-arrive 1.3s both; user-select: none; }
-.teaching-content .course-logo { width: 100%; overflow: visible; pointer-events: none; }
-.teaching-content .logo-emblem { overflow: visible; pointer-events: none; }
+.teaching-content .course-logo { position: relative; width: 100%; aspect-ratio: 1450 / 600; pointer-events: none; }
+.teaching-content .logo-emblem { position: absolute; inset: 0 auto auto 0; width: 45.51724138%; height: 90%; }
+.teaching-content .logo-sprite { background-image: url("../img/teaching/course-logo-sprite.png"); background-repeat: no-repeat; background-size: var(--sprite-width) var(--sprite-height); background-position: var(--sprite-x) var(--sprite-y); }
+.teaching-content .logo-body { position: absolute; inset: 0; }
+.teaching-content .logo-wordmark { position: absolute; left: 48.27586207%; top: 21.66666667%; width: 49.65517241%; height: 50%; display: flex; align-items: center; justify-content: center; }
+.teaching-content .logo-wordmark-art { width: 100%; aspect-ratio: 1000 / 360; }
 .teaching-content .instructor { grid-row: 3; font-size: 21px; color: #b7c7dc; line-height: 1.5; }
 .teaching-content .instructor span { margin-inline: 8px; }
 .teaching-content .hero-actions { grid-row: 4; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 30px; font-size: 19px; }
@@ -54,21 +58,20 @@ html[data-theme="dark"] .teaching-content {
 .teaching-content .pill-link:hover { background: #1682ee; }
 .teaching-content .text-link { color: #8ac0f6; }
 .teaching-content .text-link:hover { color: #c9e5ff; }
-.teaching-content .logo-float { animation: logo-float 6s ease-in-out infinite; }
-.teaching-content .logo-glint { animation: logo-glint 8s ease-in-out infinite; }
-.teaching-content .logo-fragment { --fragment-x: 8px; --fragment-y: -24px; --fragment-turn: 6deg; --fragment-duration: 5.6s; --fragment-delay: 0s; animation: logo-fragment-drift var(--fragment-duration) ease-in-out var(--fragment-delay) infinite; }
-.teaching-content .fragment-1 { transform-origin: 220px 169px; --fragment-x: -14px; --fragment-y: -34px; --fragment-turn: -12deg; --fragment-duration: 5.2s; --fragment-delay: -1.2s; }
-.teaching-content .fragment-2 { transform-origin: 309px 185px; --fragment-x: -10px; --fragment-y: -25px; --fragment-turn: 9deg; --fragment-duration: 6.1s; --fragment-delay: -3.4s; }
-.teaching-content .fragment-3 { transform-origin: 298px 226px; --fragment-x: -9px; --fragment-y: -18px; --fragment-turn: -8deg; --fragment-duration: 4.8s; --fragment-delay: -.7s; }
-.teaching-content .fragment-4 { transform-origin: 378px 242px; --fragment-x: -8px; --fragment-y: -23px; --fragment-turn: 7deg; --fragment-duration: 5.7s; --fragment-delay: -2.8s; }
-.teaching-content .fragment-5 { transform-origin: 443px 169px; --fragment-x: -6px; --fragment-y: -36px; --fragment-turn: 13deg; --fragment-duration: 4.6s; --fragment-delay: -2s; }
-.teaching-content .fragment-6 { transform-origin: 509px 175px; --fragment-x: 5px; --fragment-y: -29px; --fragment-turn: -8deg; --fragment-duration: 6.5s; --fragment-delay: -4.2s; }
-.teaching-content .fragment-7 { transform-origin: 708px 190px; --fragment-x: 11px; --fragment-y: -26px; --fragment-turn: 10deg; --fragment-duration: 5.4s; --fragment-delay: -1.9s; }
-.teaching-content .fragment-8 { transform-origin: 770px 180px; --fragment-x: 12px; --fragment-y: -32px; --fragment-turn: -7deg; --fragment-duration: 6s; --fragment-delay: -4.7s; }
-.teaching-content .fragment-9 { transform-origin: 724px 235px; --fragment-x: 9px; --fragment-y: -19px; --fragment-turn: -12deg; --fragment-duration: 4.9s; --fragment-delay: -3.1s; }
-.teaching-content .fragment-10 { transform-origin: 799px 205px; --fragment-x: 15px; --fragment-y: -28px; --fragment-turn: 9deg; --fragment-duration: 5.9s; --fragment-delay: -1.5s; }
+.teaching-content .logo-float { position: absolute; inset: 0; animation: logo-float 6s ease-in-out infinite; will-change: transform; }
+.teaching-content .logo-fragment { position: absolute; --fragment-turn: 6deg; --fragment-duration: 5.6s; --fragment-delay: 0s; animation: logo-fragment-drift var(--fragment-duration) ease-in-out var(--fragment-delay) infinite; will-change: transform; }
+.teaching-content .fragment-1 { --fragment-turn: -12deg; --fragment-duration: 5.2s; --fragment-delay: -1.2s; }
+.teaching-content .fragment-2 { --fragment-turn: 9deg; --fragment-duration: 6.1s; --fragment-delay: -3.4s; }
+.teaching-content .fragment-3 { --fragment-turn: -8deg; --fragment-duration: 4.8s; --fragment-delay: -.7s; }
+.teaching-content .fragment-4 { --fragment-turn: 7deg; --fragment-duration: 5.7s; --fragment-delay: -2.8s; }
+.teaching-content .fragment-5 { --fragment-turn: 13deg; --fragment-duration: 4.6s; --fragment-delay: -2s; }
+.teaching-content .fragment-6 { --fragment-turn: -8deg; --fragment-duration: 6.5s; --fragment-delay: -4.2s; }
+.teaching-content .fragment-7 { --fragment-turn: 10deg; --fragment-duration: 5.4s; --fragment-delay: -1.9s; }
+.teaching-content .fragment-8 { --fragment-turn: -7deg; --fragment-duration: 6s; --fragment-delay: -4.7s; }
+.teaching-content .fragment-9 { --fragment-turn: -12deg; --fragment-duration: 4.9s; --fragment-delay: -3.1s; }
+.teaching-content .fragment-10 { --fragment-turn: 9deg; --fragment-duration: 5.9s; --fragment-delay: -1.5s; }
 
-.hero-offscreen .teaching-content :is(.logo-float,.logo-glint,.logo-fragment) { animation-play-state: paused; }
+.hero-offscreen .teaching-content :is(.logo-float,.logo-fragment) { animation-play-state: paused; will-change: auto; }
 .teaching-content .section-heading { margin-bottom: 28px; }
 .teaching-content .section-heading h2 { font-size: 48px; font-weight: 600; letter-spacing: -.04em; line-height: 1.3; }
 .teaching-content .overview-section, .teaching-content .curriculum-section { background: var(--course-paper); }
@@ -188,9 +191,8 @@ html:not(.course-ready) .teaching-content :is(.gallery-controls,.goal-tablist) {
 html:not(.course-ready) .teaching-content .goal-panels { display: block; }
 @keyframes course-arrive { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 @keyframes course-logo-arrive { from { opacity: 0; transform: translateY(18px) scale(.97); } to { opacity: 1; transform: none; } }
-@keyframes logo-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
-@keyframes logo-glint { 0%,32% { transform: translateX(-500px); } 68%,100% { transform: translateX(750px); } }
-@keyframes logo-fragment-drift { 0%,100% { transform: translate(0,0) rotate(0); } 50% { transform: translate(var(--fragment-x),var(--fragment-y)) rotate(var(--fragment-turn)); } }
+@keyframes logo-float { 0%,100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-1.66666667%,0); } }
+@keyframes logo-fragment-drift { 0%,100% { transform: translate3d(0,0,0) rotate(0); } 50% { transform: translate3d(var(--fragment-x),var(--fragment-y),0) rotate(var(--fragment-turn)); } }
 @keyframes geometry-drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 @keyframes gallery-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes basis-transform { 0%,100% { transform: skewX(0); } 35% { transform: skewX(-7deg) translateY(-8px); } 70% { transform: skewX(7deg) translateY(4px); } }
@@ -220,6 +222,10 @@ html:not(.course-ready) .teaching-content .goal-panels { display: block; }
   .teaching-content .hero-inner { gap: 22px; padding-block: 32px; }
   .teaching-content #course-title { font-size: clamp(28px,8vw,42px); white-space: normal; text-wrap: balance; }
   .teaching-content .hero-art { width: 100%; max-width: 250px; }
+  .teaching-content .course-logo { aspect-ratio: 660 / 760; }
+  .teaching-content .logo-emblem { width: 100%; height: 71.05263158%; }
+  .teaching-content .logo-wordmark { left: 2.27272727%; top: 71.05263158%; width: 95.45454545%; height: 27.63157895%; }
+  .teaching-content .logo-wordmark-art { width: 92.59259259%; }
   .teaching-content .instructor { font-size: 18px; }
   .teaching-content .hero-actions { gap: 20px; font-size: 17px; }
   .teaching-content .pill-link { min-height: 44px; padding-inline: 20px; }
@@ -291,5 +297,5 @@ html:not(.course-ready) .teaching-content .goal-panels { display: block; }
 }
 @media (prefers-reduced-motion: reduce) {
   .teaching-content *, .teaching-content *::before, .teaching-content *::after { animation: none !important; transition: none !important; }
-  .teaching-content .logo-glint { display: none; }
+  .teaching-content :is(.logo-float,.logo-fragment) { will-change: auto; }
 }

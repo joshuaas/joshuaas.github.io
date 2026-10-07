@@ -1,45 +1,21 @@
-{% assign course_logo = '/assets/img/teaching/course-brand.png' | relative_url %}
-{% assign logo_fragments = '1,2,3,4,5,6,7,8,9,10' | split: ',' %}
-<svg class="course-logo" viewBox="0 0 1450 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="course-logo-title">
-  <title id="course-logo-title">机器学习的理论极小值 / The Theoretical Minimum</title>
-  <defs>
-    <!-- Keep the cover artwork intact; separate its dark backdrop in SVG. -->
-    <filter id="course-metal" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
-      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  .8 .8 .8 0 -.29"/>
-    </filter>
-    <image id="course-logo-artwork" width="1942" height="809" href="{{ course_logo }}" xlink:href="{{ course_logo }}" filter="url(#course-metal)"/>
-    <!-- Cutouts follow the detached fragments in the original cover image. -->
-    <clipPath id="course-fragment-1" clipPathUnits="userSpaceOnUse"><path id="course-fragment-shape-1" d="M192 168 219 143 247 169 220 196Z"/></clipPath>
-    <clipPath id="course-fragment-2" clipPathUnits="userSpaceOnUse"><path id="course-fragment-shape-2" d="M281 151 304 151 337 195 332 219 307 208 286 181Z"/></clipPath>
-    <clipPath id="course-fragment-3" clipPathUnits="userSpaceOnUse"><path id="course-fragment-shape-3" d="M269 199 277 194 329 249 320 257Z"/></clipPath>
-    <clipPath id="course-fragment-4" clipPathUnits="userSpaceOnUse"><path id="course-fragment-shape-4" d="M346 211 385 207 410 278 361 267Z"/></clipPath>
-    <clipPath id="course-fragment-5" clipPathUnits="userSpaceOnUse"><path id="course-fragment-shape-5" d="M420 164 450 147 466 177 435 192Z"/></clipPath>
-    <clipPath id="course-fragment-6" clipPathUnits="userSpaceOnUse"><path id="course-fragment-shape-6" d="M474 199 509 173 520 131 540 129 536 177 513 205 484 218Z"/></clipPath>
-    <clipPath id="course-fragment-7" clipPathUnits="userSpaceOnUse"><path id="course-fragment-shape-7" d="M679 190 708 181 721 167 740 173 730 195 706 211 679 211Z"/></clipPath>
-    <clipPath id="course-fragment-8" clipPathUnits="userSpaceOnUse"><path id="course-fragment-shape-8" d="M747 208 782 146 793 151 757 214Z"/></clipPath>
-    <clipPath id="course-fragment-9" clipPathUnits="userSpaceOnUse"><path id="course-fragment-shape-9" d="M704 235 724 215 745 236 724 257Z"/></clipPath>
-    <clipPath id="course-fragment-10" clipPathUnits="userSpaceOnUse"><path id="course-fragment-shape-10" d="M766 234 806 175 831 219Z"/></clipPath>
-    <mask id="course-logo-body" maskUnits="userSpaceOnUse" x="180" y="100" width="660" height="540">
-      <rect x="180" y="100" width="660" height="540" fill="white"/>
-      {% for fragment in logo_fragments %}<use href="#course-fragment-shape-{{ fragment }}" xlink:href="#course-fragment-shape-{{ fragment }}" fill="black"/>{% endfor %}
-    </mask>
-    <linearGradient id="course-shine"><stop stop-color="white" stop-opacity="0"/><stop offset=".5" stop-color="white" stop-opacity=".65"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
-    <mask id="course-metal-mask" maskUnits="userSpaceOnUse" x="180" y="100" width="660" height="540">
-      <use href="#course-logo-artwork" xlink:href="#course-logo-artwork"/>
-    </mask>
-  </defs>
-  <svg class="logo-emblem" x="0" y="0" width="660" height="540" viewBox="180 100 660 540">
-    <g class="logo-float">
-      <g mask="url(#course-logo-body)">
-        <use href="#course-logo-artwork" xlink:href="#course-logo-artwork"/>
-        <g mask="url(#course-metal-mask)" aria-hidden="true"><g class="logo-glint"><rect x="180" y="80" width="140" height="590" fill="url(#course-shine)" transform="rotate(18 250 370)"/></g></g>
-      </g>
-      {% for fragment in logo_fragments %}
-      <g class="logo-fragment fragment-{{ fragment }}" aria-hidden="true"><g clip-path="url(#course-fragment-{{ fragment }})"><use href="#course-logo-artwork" xlink:href="#course-logo-artwork"/></g></g>
-      {% endfor %}
-    </g>
-  </svg>
-  <svg class="logo-wordmark" x="700" y="130" width="720" height="300" viewBox="825 235 1000 360">
-    <use href="#course-logo-artwork" xlink:href="#course-logo-artwork"/>
-  </svg>
-</svg>
+<!-- The cover logo is pre-rendered into one transparent atlas: no per-frame SVG filters or masks. -->
+<div class="course-logo" role="img" aria-label="机器学习的理论极小值 / The Theoretical Minimum">
+  <div class="logo-emblem" aria-hidden="true">
+    <div class="logo-float">
+      <div class="logo-body logo-sprite" style="--sprite-width:151.51515152%;--sprite-height:166.66666667%;--sprite-x:0.00000000%;--sprite-y:0.00000000%"></div>
+      <div class="logo-fragment logo-sprite fragment-1" style="left:1.51515152%;top:7.59259259%;width:9.09090909%;height:10.74074074%;transform-origin:50.00000000% 48.27586207%;--fragment-x:-23.33333333%;--fragment-y:-58.62068966%;--sprite-width:1666.66666667%;--sprite-height:1551.72413793%;--sprite-x:70.21276596%;--sprite-y:0.00000000%"></div>
+      <div class="logo-fragment logo-sprite fragment-2" style="left:15.00000000%;top:9.07407407%;width:9.24242424%;height:13.51851852%;transform-origin:49.18032787% 49.31506849%;--fragment-x:-16.39344262%;--fragment-y:-34.24657534%;--sprite-width:1639.34426230%;--sprite-height:1232.87671233%;--sprite-x:76.89030884%;--sprite-y:0.00000000%"></div>
+      <div class="logo-fragment logo-sprite fragment-3" style="left:13.18181818%;top:17.03703704%;width:9.84848485%;height:12.59259259%;transform-origin:47.69230769% 50.00000000%;--fragment-x:-13.84615385%;--fragment-y:-26.47058824%;--sprite-width:1538.46153846%;--sprite-height:1323.52941176%;--sprite-x:83.95721925%;--sprite-y:0.00000000%"></div>
+      <div class="logo-fragment logo-sprite fragment-4" style="left:24.84848485%;top:19.44444444%;width:10.45454545%;height:14.07407407%;transform-origin:49.27536232% 48.68421053%;--fragment-x:-11.59420290%;--fragment-y:-30.26315789%;--sprite-width:1449.27536232%;--sprite-height:1184.21052632%;--sprite-x:91.51450054%;--sprite-y:0.00000000%"></div>
+      <div class="logo-fragment logo-sprite fragment-5" style="left:36.06060606%;top:8.33333333%;width:7.72727273%;height:9.25925926%;transform-origin:49.01960784% 48.00000000%;--fragment-x:-11.76470588%;--fragment-y:-72.00000000%;--sprite-width:1960.78431373%;--sprite-height:1800.00000000%;--sprite-x:97.26027397%;--sprite-y:0.00000000%"></div>
+      <div class="logo-fragment logo-sprite fragment-6" style="left:44.24242424%;top:5.00000000%;width:10.75757576%;height:17.40740741%;transform-origin:52.11267606% 51.06382979%;--fragment-x:7.04225352%;--fragment-y:-30.85106383%;--sprite-width:1408.45070423%;--sprite-height:957.44680851%;--sprite-x:71.04413348%;--sprite-y:9.67741935%"></div>
+      <div class="logo-fragment logo-sprite fragment-7" style="left:75.30303030%;top:12.03703704%;width:10.00000000%;height:9.07407407%;transform-origin:46.96969697% 51.02040816%;--fragment-x:16.66666667%;--fragment-y:-53.06122449%;--sprite-width:1515.15151515%;--sprite-height:1836.73469388%;--sprite-x:78.47965739%;--sprite-y:9.16568743%"></div>
+      <div class="logo-fragment logo-sprite fragment-8" style="left:85.60606061%;top:8.14814815%;width:7.72727273%;height:13.51851852%;transform-origin:49.01960784% 49.31506849%;--fragment-x:23.52941176%;--fragment-y:-43.83561644%;--sprite-width:1960.78431373%;--sprite-height:1232.87671233%;--sprite-x:84.40463646%;--sprite-y:9.43168077%"></div>
+      <div class="logo-fragment logo-sprite fragment-9" style="left:79.09090909%;top:20.92592593%;width:6.96969697%;height:8.70370370%;transform-origin:47.82608696% 46.80851064%;--fragment-x:19.56521739%;--fragment-y:-40.42553191%;--sprite-width:2173.91304348%;--sprite-height:1914.89361702%;--sprite-x:89.51781971%;--sprite-y:9.14419695%"></div>
+      <div class="logo-fragment logo-sprite fragment-10" style="left:88.48484848%;top:13.51851852%;width:10.60606061%;height:11.85185185%;transform-origin:50.00000000% 50.00000000%;--fragment-x:21.42857143%;--fragment-y:-43.75000000%;--sprite-width:1428.57142857%;--sprite-height:1406.25000000%;--sprite-x:96.98924731%;--sprite-y:9.33014354%"></div>
+    </div>
+  </div>
+  <div class="logo-wordmark" aria-hidden="true">
+    <div class="logo-wordmark-art logo-sprite" style="--sprite-width:100.00000000%;--sprite-height:250.00000000%;--sprite-x:0.00000000%;--sprite-y:100.00000000%"></div>
+  </div>
+</div>
