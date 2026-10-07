@@ -65,7 +65,7 @@
               <!-- Other pages -->
               {%- assign sorted_pages = site.pages | sort: "nav_order" -%}
               {%- for p in sorted_pages -%}
-              {% if p.title != "projects" and p.title != "repositories" and p.title != "teaching" and p.title != "submenus" %}
+              {% if p.title != "projects" and p.title != "repositories" and p.title != "submenus" %}
               {%- if p.nav and p.autogen == nil -%}
               {%- if p.dropdown %}
               <li class="nav-item dropdown {% if page.title == p.title %}active{% endif %}">

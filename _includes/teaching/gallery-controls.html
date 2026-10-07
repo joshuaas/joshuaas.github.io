@@ -1,0 +1,13 @@
+<div class="gallery-controls shell">
+  <button type="button" class="gallery-playback gallery-control" data-gallery-playback aria-label="暂停{{ include.label }}自动播放" aria-pressed="true" aria-controls="{{ include.prefix }}-track">
+    <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z" fill="currentColor"/></svg>
+    <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zm6 0h4v14h-4z" fill="currentColor"/></svg>
+  </button>
+  <div class="gallery-indicators" aria-label="{{ include.label }}选择">
+    {% for item in include.items %}<button type="button" class="gallery-indicator" data-gallery-index="{{ forloop.index0 }}" aria-controls="{{ include.prefix }}-card-{{ item.id }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"><span>{{ item.title }}</span><span class="gallery-progress" aria-hidden="true"></span></button>{% endfor %}
+  </div>
+  <div class="gallery-arrows">
+    <button type="button" class="gallery-control" data-gallery-previous aria-controls="{{ include.prefix }}-track" aria-label="上一项{{ include.label }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button type="button" class="gallery-control" data-gallery-next aria-controls="{{ include.prefix }}-track" aria-label="下一项{{ include.label }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </div>
+</div>

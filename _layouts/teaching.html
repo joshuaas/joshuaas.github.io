@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+{% assign course = site.data.teaching %}
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ '/assets/css/teaching.css' | relative_url }}">
+  <link rel="preload" as="image" href="{{ '/assets/img/teaching/course-brand.png' | relative_url }}">
+  <script defer src="{{ '/assets/js/teaching.js' | relative_url }}"></script>
+</head>
+<body class="teaching-page {% if site.navbar_fixed %}fixed-top-nav{% endif %}">
+  {% include header.html %}
+  <a class="course-skip-link" href="#main">跳转到课程内容</a>
+  <main id="main" class="teaching-content">
+    <section class="course-hero" aria-labelledby="course-title">
+      <div class="hero-inner shell">
+        <div class="hero-art">{% include teaching/logo.html %}</div>
+        <div class="hero-copy">
+          <h1 id="course-title">{{ course.title }}</h1>
+          <p class="instructor">{{ course.instructor }} <span aria-hidden="true">·</span> {{ course.institution }}</p>
+          <div class="hero-actions"><a class="pill-link" href="#overview">课程概览</a><a class="text-link" href="#curriculum">课程内容及资料下载 <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="overview-section section-space" aria-labelledby="overview-title">
+      <div class="section-heading shell"><h2 id="overview-title">课程概览</h2></div>
+      <div class="course-gallery feature-gallery" data-gallery aria-labelledby="overview-title" role="region" aria-roledescription="轮播">
+        <div class="gallery-track" id="overview-track" data-gallery-track tabindex="0" aria-label="课程特色，左右滑动查看更多">
+          {% for feature in course.features %}
+          <article class="gallery-card feature-panel feature-{{ feature.id }}" id="overview-card-{{ feature.id }}" data-gallery-card role="group" aria-roledescription="幻灯片" aria-label="{{ feature.title }}">
+            <div class="feature-copy">
+              {% if feature.id == 'mathematics' %}
+              <h3>数学基础<span>串讲</span></h3>
+              <div class="feature-description"><p><strong>线性代数</strong>{{ feature.linear_algebra }}<span class="detail-note">{{ feature.linear_detail }}</span></p><p><strong>概率论</strong>{{ feature.probability }}</p></div>
+              {% elsif feature.id == 'minimum' %}
+              <h3>{{ feature.title }}</h3>
+              <figure class="minimum-quote">
+                <blockquote lang="en"><p>{% for segment in feature.quote_segments %}{% if segment.color %}<strong class="quote-{{ segment.color }}">{{ segment.text | escape }}</strong>{% else %}{{ segment.text | escape }}{% endif %}{% endfor %}</p></blockquote>
+                <figcaption>— <cite>{{ feature.attribution }}</cite></figcaption>
+              </figure>
+              {% else %}
+              <h3>AI <span class="science-plus">+</span> SCI</h3>
+              <p class="science-intro">{{ feature.introduction }}</p>
+              <div class="science-directions"><p><strong>AI4S</strong><span>{{ feature.ai4s }}</span></p><p><strong>S4AI</strong><span>{{ feature.s4ai }}</span></p></div>
+              <div class="science-examples">{% for example in feature.examples %}<p>{{ example.text }}</p>{% endfor %}</div>
+              {% endif %}
+            </div>
+            {% unless feature.id == 'minimum' %}<div class="feature-visual">{% include teaching/feature-art.html feature=feature.id %}</div>{% endunless %}
+          </article>
+          {% endfor %}
+        </div>
+        {% include teaching/gallery-controls.html items=course.features prefix="overview" label="课程特色" %}
+      </div>
+      <div class="shell">
+        <div class="goal-tabs" data-tabset data-initial-tab="1">
+          <div class="goal-header"><h3>课程目标</h3><div class="tablist goal-tablist" role="tablist" aria-label="按专业查看课程目标">{% for goal in course.goals %}<button type="button" role="tab" id="goal-tab-{{ goal.id }}" aria-controls="goal-{{ goal.id }}" aria-selected="{% if forloop.last %}true{% else %}false{% endif %}">{{ goal.audience }}</button>{% endfor %}</div></div>
+          <div class="goal-panels">{% for goal in course.goals %}<div class="goal-panel" id="goal-{{ goal.id }}" role="tabpanel" aria-labelledby="goal-tab-{{ goal.id }}" tabindex="0"><p>{{ goal.text }}</p></div>{% endfor %}</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="curriculum" class="curriculum-section section-space" aria-labelledby="curriculum-title">
+      <div class="section-heading shell"><h2 id="curriculum-title">课程内容及资料下载</h2></div>
+      <div class="course-gallery module-gallery" data-gallery aria-labelledby="curriculum-title" role="region" aria-roledescription="轮播">
+        <div class="gallery-track" id="curriculum-track" data-gallery-track tabindex="0" aria-label="课程模块，左右滑动查看更多">
+          {% for module in course.modules %}
+          <article id="curriculum-card-{{ module.id }}" class="gallery-card module-panel" data-gallery-card role="group" aria-roledescription="幻灯片" aria-label="{{ module.title }}">
+            <div class="module-copy">
+              <h3>{{ module.title }}</h3>
+              <ul class="module-chapters">
+                {% for chapter in module.chapters %}
+                <li>
+                  <h4><span class="chapter-number">{{ chapter.number }}</span><span>{{ chapter.outline_title }}</span></h4>
+                  <div class="chapter-downloads">
+                    {% for resource_type in course.resource_types %}{% assign documents = chapter.resources[resource_type.id] %}{% for document in documents %}
+                    <a href="{{ document.file | relative_url | uri_escape | escape }}" download="{{ document.download_name | default: '' | escape }}" aria-label="下载{{ chapter.title }}{{ resource_type.title }}：{{ document.title | escape }}">{{ resource_type.title }}{% if documents.size > 1 %} · {{ document.title | escape }}{% endif %} <span aria-hidden="true">↓</span></a>
+                    {% endfor %}{% endfor %}
+                  </div>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="module-visual">{% include teaching/module-art.html module=module.id %}</div>
+          </article>
+          {% endfor %}
+        </div>
+        {% include teaching/gallery-controls.html items=course.modules prefix="curriculum" label="课程模块" %}
+      </div>
+      <div class="shell">
+        <details class="complete-outline"><summary>查看完整大纲 <span aria-hidden="true">+</span></summary><div class="outline-groups">{% for module in course.modules %}<div><h3>{{ module.title }}</h3><ol>{% for chapter in module.chapters %}<li><span class="chapter-number">{{ chapter.number }}</span><span>{{ chapter.outline_title }}</span></li>{% endfor %}</ol></div>{% endfor %}</div></details>
+      </div>
+    </section>
+
+    <footer class="course-footer"><div class="shell"><p>{{ course.instructor }} · {{ course.institution }}</p><a href="{{ '/' | relative_url }}">返回个人主页 <span aria-hidden="true">↗</span></a></div></footer>
+  </main>
+  {% include scripts/jquery.html %}
+  {% include scripts/bootstrap.html %}
+  {% include scripts/misc.html %}
+</body>
+</html>

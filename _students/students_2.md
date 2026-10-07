@@ -35,6 +35,7 @@ students:
     identity: Ph.D.
     publications:
       - ICML×1
+      - NeurIPS×1
   - name: 吕星宇
     pinyin: Lyu Xingyu
     photo:
@@ -50,7 +51,7 @@ students:
   - name: 雷祺丰
     pinyin: Lei Qifeng
     photo: /assets/img/students/qifeng.jpeg
-    identity: Master
+    identity: Ph.D.
     publications:
       - AAAI×1
   - name: 王广辉

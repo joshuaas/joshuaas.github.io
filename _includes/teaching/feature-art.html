@@ -1,0 +1,25 @@
+{% if include.feature == 'mathematics' %}
+<svg class="feature-art geometry-art" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs><linearGradient id="course-plane" x1="100" y1="100" x2="500" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#d8edff" stop-opacity=".2"/><stop offset=".5" stop-color="#83b9ee" stop-opacity=".45"/><stop offset="1" stop-color="#c7e9ff" stop-opacity=".15"/></linearGradient></defs>
+  <ellipse cx="300" cy="430" rx="260" ry="38" fill="#b9c9da" opacity=".09"/>
+  <g class="geometry-planes">
+    <path d="M45 250 300 110 555 250 300 390Z" fill="url(#course-plane)" stroke="#bdd5ec"/>
+    <path d="M45 195 300 55 555 195 300 335Z" fill="url(#course-plane)" stroke="#bdd5ec"/>
+    <path d="M45 140 300 0 555 140 300 280Z" fill="url(#course-plane)" stroke="#bdd5ec"/>
+    <g stroke="#bdd5ec"><path d="M87 117 342 257M130 93 385 233M173 70 428 210M215 47 470 187M258 23 513 163"/><path d="M87 163 342 23M130 187 385 47M173 210 428 70M215 233 470 93M258 257 513 117"/></g>
+    <path d="M93 224 339 89M324 91 339 89 333 102" stroke="#1766b4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="300" cy="140" r="5" fill="#358cda"/>
+  </g>
+</svg>
+{% elsif include.feature == 'minimum' %}
+<svg class="feature-art minimum-art" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs><linearGradient id="minimum-ink"><stop stop-color="#d4e5f5"/><stop offset="1" stop-color="#8ab6df"/></linearGradient></defs>
+  <text x="300" y="260" text-anchor="middle" fill="url(#minimum-ink)" font-family="Georgia, serif" font-style="italic" font-size="190">min</text><path d="M100 300H500" stroke="#d5e4f2"/>
+</svg>
+{% else %}
+<svg class="feature-art science-art" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs><linearGradient id="science-ribbon"><stop stop-color="#d3efff"/><stop offset=".4" stop-color="#3293e4"/><stop offset="1" stop-color="#83bbe9"/></linearGradient></defs>
+  <path d="M300 200C230 80 50 85 50 200S220 318 300 200C380 82 550 82 550 200S375 320 300 200" stroke="#e0ecf7" stroke-width="47"/>
+  <path class="science-ribbon" d="M300 200C230 80 50 85 50 200S220 318 300 200C380 82 550 82 550 200S375 320 300 200" stroke="url(#science-ribbon)" stroke-width="37"/>
+  <g fill="#1a446b" font-family="system-ui, sans-serif" font-size="36" text-anchor="middle"><text x="150" y="212">AI</text><text x="450" y="212">SCI</text></g>
+</svg>
+{% endif %}
