@@ -83,7 +83,7 @@
                   {% endif %}
                   <div class="chapter-downloads">
                     {% for resource_type in course.resource_types %}{% assign documents = chapter.resources[resource_type.id] %}{% for document in documents %}
-                    <a href="{{ document.file | relative_url | uri_escape | escape }}" download="{{ document.download_name | default: '' | escape }}" aria-label="下载{{ chapter.title }}{{ resource_type.title }}：{{ document.title | escape }}">{{ resource_type.title }}{% if documents.size > 1 %} · {{ document.title | escape }}{% endif %} <span aria-hidden="true">↓</span></a>
+                    <a{% if resource_type.id == 'additional_materials' %} class="chapter-additional-download"{% endif %} href="{{ document.file | relative_url | uri_escape | escape }}" download="{{ document.download_name | default: '' | escape }}" aria-label="下载{{ chapter.title }}{{ resource_type.title }}：{{ document.title | escape }}"><span class="download-label">{{ resource_type.title }}{% if resource_type.id == 'additional_materials' or documents.size > 1 %} · {{ document.title | escape }}{% endif %}</span><span class="download-arrow" aria-hidden="true">↓</span></a>
                     {% endfor %}{% endfor %}
                   </div>
                 </li>

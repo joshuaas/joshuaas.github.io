@@ -67,7 +67,7 @@ modules:
         outline_title: 概率统计复习
         description: 介绍概率与统计的基本概念，理解其背后的哲思和原理。
   - id: supervised
-    title: 有监督学习中的基础理论
+    title: 有监督学习基础理论
     chapters:
       - number: "04"
         title: 回归
@@ -89,7 +89,7 @@ modules:
           - title: 进阶篇
             description: 介绍高维数据、时序数据和图数据对应的深度学习方法，以及表格大模型与物理启发模型。
   - id: strategies
-    title: 两个通用策略
+    title: 有监督学习进阶原理
     chapters:
       - number: "07"
         title: 间隔理论

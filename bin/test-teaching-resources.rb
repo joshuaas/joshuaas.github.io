@@ -67,6 +67,12 @@ Dir.mktmpdir('teaching-resources-') do |temporary|
   assert(html.include?('下载回归板书：回归板书'), 'Board-only link missing from outline')
   assert(html.include?('下载分类附加材料：分类补充阅读'), 'Additional-materials-only link missing from outline')
   assert(html.include?('附加材料 · 10 延伸 &amp;copy; 阅读'), 'Multiple additional materials were not individually named/escaped')
+  additional_links = html.scan(/<a class="chapter-additional-download"[^>]*>(.*?)<\/a>/m).flatten
+  assert(additional_links.size == 3, 'Each additional material must have its own download row')
+  ['2 补充阅读', '10 延伸 &amp;copy; 阅读', '分类补充阅读'].each do |title|
+    assert(additional_links.any? { |link| link.include?("附加材料 · #{title}</span>") }, 'Additional material must display its entire title without the extension, even when alone')
+  end
+  assert(html.include?('有监督学习基础理论') && html.include?('有监督学习进阶原理') && !html.include?('两个通用策略') && !html.include?('有监督学习中的基础理论'), 'Updated module names missing from rendered curriculum')
   assert(!html.include?('未知章节') && !html.include?('ignore.txt'), 'Invalid files were listed')
   rendered_paths = html.scan(/href="([^"]+)"/).flatten.map { |url| URI::DEFAULT_PARSER.unescape(CGI.unescapeHTML(url)).force_encoding('UTF-8') }
   downloads.each do |path|

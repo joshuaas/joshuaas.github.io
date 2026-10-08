@@ -145,6 +145,7 @@ html[data-theme="dark"] .teaching-content {
 .course-ready .teaching-content .goal-panel[data-active="false"] { visibility: hidden; pointer-events: none; }
 .teaching-content .goal-panel p { font-size: 25px; line-height: 1.7; color: var(--course-muted); }
 .teaching-content .module-panel { display: grid; grid-template-columns: 1.3fr 1fr; align-items: center; gap: 28px; padding: 44px; min-height: 500px; background: var(--course-card); }
+.teaching-content .module-copy { min-width: 0; }
 .teaching-content .module-copy h3 { font-size: 48px; line-height: 1.25; font-weight: 600; letter-spacing: -.04em; text-wrap: balance; }
 .teaching-content .module-chapters { margin: 26px 0 0; padding: 0; list-style: none; }
 .teaching-content .module-chapters li { border-top: 1px solid var(--course-line); padding: 18px 0; }
@@ -156,6 +157,9 @@ html[data-theme="dark"] .teaching-content {
 .teaching-content .chapter-downloads { display: flex; flex-wrap: wrap; gap: 10px 22px; }
 .teaching-content .chapter-downloads a { display: inline-flex; gap: 7px; color: var(--course-blue); font-size: 18px; line-height: 1.4; padding-top: 10px; }
 .teaching-content .chapter-downloads a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.teaching-content .chapter-downloads .chapter-additional-download { flex-basis: 100%; min-width: 0; align-items: baseline; }
+.teaching-content .download-label { min-width: 0; overflow-wrap: anywhere; }
+.teaching-content .download-arrow { flex-shrink: 0; }
 .teaching-content .module-visual { min-width: 0; }
 .teaching-content .module-art { width: 100%; }
 .teaching-content .basis-plane { transform-origin: 240px 180px; animation: basis-transform 8s ease-in-out infinite; }
