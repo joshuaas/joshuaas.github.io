@@ -57,49 +57,65 @@ modules:
         title: 绪论
         subtitle: 本课程缩影
         outline_title: 绪论
+        description: 介绍课程的主要内容与学习目标。
       - number: "02"
         title: 线性代数复习
         outline_title: 线性代数复习
+        description: 从几何直观理解向量与矩阵的基本操作，学习矩阵导数。
       - number: "03"
         title: 概率统计复习
         outline_title: 概率统计复习
+        description: 介绍概率与统计的基本概念，理解其背后的哲思和原理。
   - id: supervised
     title: 有监督学习中的基础理论
     chapters:
       - number: "04"
         title: 回归
         outline_title: 回归
+        description: 介绍回归任务的建模方法与基本原理。
       - number: "05"
         title: 分类
         outline_title: 分类
+        description: 介绍分类任务的建模方法与基本原理。
   - id: models
-    title: 介绍模型
+    title: 深度学习简介
     chapters:
       - number: "06"
         title: 深度神经网络
         outline_title: 深度神经网络
+        parts:
+          - title: 基础篇
+            description: 介绍 MLP 基础模型与 BP 算法。
+          - title: 进阶篇
+            description: 介绍高维数据、时序数据和图数据对应的深度学习方法，以及表格大模型与物理启发模型。
   - id: strategies
     title: 两个通用策略
     chapters:
       - number: "07"
         title: 间隔理论
         outline_title: 间隔理论
+        description: 介绍间隔理论及其在学习算法中的作用。
       - number: "08"
         title: 模型集成
         outline_title: 模型集成
+        description: 介绍模型集成的基本思想与方法。
   - id: unsupervised
     title: 无监督学习中的原理
     chapters:
       - number: "09"
         title: 聚类
         outline_title: 聚类
+        description: 介绍聚类任务的基本思想与方法。
       - number: "10"
         title: 表征、重构及生成模型
         outline_title: 表征、重构及生成模型
-# Each chapter supports multiple files in both categories, including automatically discovered PDFs.
+        description: 介绍数据表征、重构与生成模型的基本原理。
+# Each chapter supports multiple files in all categories, including automatically discovered PDFs.
 # Explicit resources above remain available for custom titles or files outside resource_directory.
 resource_types:
   - id: slides
     title: 课件
   - id: board_notes
     title: 板书
+  - id: additional_materials
+    title: 附加材料

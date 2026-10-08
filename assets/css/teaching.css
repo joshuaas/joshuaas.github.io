@@ -149,6 +149,9 @@ html[data-theme="dark"] .teaching-content {
 .teaching-content .module-chapters { margin: 26px 0 0; padding: 0; list-style: none; }
 .teaching-content .module-chapters li { border-top: 1px solid var(--course-line); padding: 18px 0; }
 .teaching-content .module-chapters h4 { display: flex; gap: 14px; font-size: 26px; line-height: 1.5; font-weight: 500; text-wrap: balance; }
+.teaching-content .chapter-description { margin-top: 7px; font-size: 19px; line-height: 1.6; color: var(--course-muted); }
+.teaching-content .chapter-part + .chapter-part { margin-top: 18px; }
+.teaching-content .chapter-part .chapter-number { flex-basis: 4ch; }
 .teaching-content .chapter-number { flex: 0 0 2ch; color: var(--course-blue); font-variant-numeric: tabular-nums; }
 .teaching-content .chapter-downloads { display: flex; flex-wrap: wrap; gap: 10px 22px; }
 .teaching-content .chapter-downloads a { display: inline-flex; gap: 7px; color: var(--course-blue); font-size: 18px; line-height: 1.4; padding-top: 10px; }
@@ -185,6 +188,8 @@ html:not(.course-ready) .teaching-content .module-art * { animation: none !impor
 .teaching-content .outline-groups h3 { font-size: 23px; line-height: 1.4; font-weight: 600; margin-bottom: 14px; }
 .teaching-content .outline-groups ol { margin: 0; padding: 0; list-style: none; }
 .teaching-content .outline-groups li { display: flex; gap: 14px; font-size: 21px; line-height: 1.6; margin-top: 10px; }
+.teaching-content .outline-parts p { margin-top: 8px; font-size: 19px; line-height: 1.6; color: var(--course-muted); }
+.teaching-content .outline-parts strong { color: var(--course-blue); font-weight: 500; }
 .teaching-content .course-footer { padding-block: 28px; background: var(--course-paper); color: var(--course-muted); font-size: 16px; }
 .teaching-content .course-footer .shell { display: flex; justify-content: space-between; gap: 20px; }
 html:not(.course-ready) .teaching-content :is(.gallery-controls,.goal-tablist) { display: none; }
@@ -275,6 +280,7 @@ html:not(.course-ready) .teaching-content .goal-panels { display: block; }
   .teaching-content .module-chapters { margin-top: 20px; }
   .teaching-content .module-chapters li { padding: 12px 0; }
   .teaching-content .module-chapters h4 { font-size: 21px; gap: 12px; text-wrap: pretty; }
+  .teaching-content .chapter-description, .teaching-content .outline-parts p { font-size: 18px; }
   .teaching-content .chapter-downloads { margin-top: 8px; gap: 8px; }
   .teaching-content .chapter-downloads a { font-size: 16px; min-height: 36px; padding: 7px 12px; border-radius: 10px; background: var(--course-paper); }
   .teaching-content .complete-outline summary { font-size: 19px; }

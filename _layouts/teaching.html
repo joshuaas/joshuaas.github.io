@@ -70,7 +70,17 @@
               <ul class="module-chapters">
                 {% for chapter in module.chapters %}
                 <li>
+                  {% if chapter.parts %}
+                  {% for part in chapter.parts %}
+                  <div class="chapter-part">
+                    <h4><span class="chapter-number">{{ chapter.number }}.{{ forloop.index }}</span><span>{{ part.title }}</span></h4>
+                    <p class="chapter-description">{{ part.description }}</p>
+                  </div>
+                  {% endfor %}
+                  {% else %}
                   <h4><span class="chapter-number">{{ chapter.number }}</span><span>{{ chapter.outline_title }}</span></h4>
+                  {% if chapter.description %}<p class="chapter-description">{{ chapter.description }}</p>{% endif %}
+                  {% endif %}
                   <div class="chapter-downloads">
                     {% for resource_type in course.resource_types %}{% assign documents = chapter.resources[resource_type.id] %}{% for document in documents %}
                     <a href="{{ document.file | relative_url | uri_escape | escape }}" download="{{ document.download_name | default: '' | escape }}" aria-label="下载{{ chapter.title }}{{ resource_type.title }}：{{ document.title | escape }}">{{ resource_type.title }}{% if documents.size > 1 %} · {{ document.title | escape }}{% endif %} <span aria-hidden="true">↓</span></a>
@@ -87,7 +97,22 @@
         {% include teaching/gallery-controls.html items=course.modules prefix="curriculum" label="课程模块" %}
       </div>
       <div class="shell">
-        <details class="complete-outline"><summary>查看完整大纲 <span aria-hidden="true">+</span></summary><div class="outline-groups">{% for module in course.modules %}<div><h3>{{ module.title }}</h3><ol>{% for chapter in module.chapters %}<li><span class="chapter-number">{{ chapter.number }}</span><span>{{ chapter.outline_title }}</span></li>{% endfor %}</ol></div>{% endfor %}</div></details>
+        <details class="complete-outline">
+          <summary>查看完整大纲 <span aria-hidden="true">+</span></summary>
+          <div class="outline-groups">
+            {% for module in course.modules %}
+            <div><h3>{{ module.title }}</h3><ol>
+              {% for chapter in module.chapters %}
+              <li><span class="chapter-number">{{ chapter.number }}</span><div>
+                <span>{{ chapter.outline_title }}</span>
+                {% if chapter.description %}<p class="chapter-description">{{ chapter.description }}</p>{% endif %}
+                {% if chapter.parts %}<div class="outline-parts">{% for part in chapter.parts %}<p><strong>{{ chapter.number }}.{{ forloop.index }} {{ part.title }}</strong> — {{ part.description }}</p>{% endfor %}</div>{% endif %}
+              </div></li>
+              {% endfor %}
+            </ol></div>
+            {% endfor %}
+          </div>
+        </details>
       </div>
     </section>
 

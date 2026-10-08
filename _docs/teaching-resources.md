@@ -1,19 +1,22 @@
 # 添加课程资源
 
-将 PDF 放到对应章节和类型目录中，Jekyll 在每次构建时自动更新大纲中的课件、板书下载入口。无需逐个修改 YAML，也无需修改 GitHub Actions。
+将 PDF 放到对应章节和类型目录中，Jekyll 在每次构建时自动更新课程内容中的课件、板书和附加材料下载入口。无需逐个修改 YAML，也无需修改 GitHub Actions。
 
 ```text
 assets/teaching/
 ├── 01/
 │   ├── slides/          # 第一章课件
 │   │   └── 第一章 绪论.pdf
-│   └── board_notes/     # 第一章板书
-│       └── 第一章 板书.pdf
+│   ├── board_notes/     # 第一章板书
+│   │   └── 第一章 板书.pdf
+│   └── additional_materials/  # 第一章附加材料
+│       └── 补充阅读.pdf
 ├── 02/
 │   ├── slides/
 │   │   ├── 01 向量.pdf
 │   │   └── 02 矩阵.pdf
-│   └── board_notes/
+│   ├── board_notes/
+│   └── additional_materials/
 └── …                   # 03–10 使用同样的结构
 ```
 
@@ -24,13 +27,15 @@ assets/teaching/
 | `03` | 概率统计复习 |
 | `04` | 回归 |
 | `05` | 分类 |
-| `06` | 深度神经网络 |
+| `06` | 深度学习简介：基础篇与进阶篇 |
 | `07` | 间隔理论 |
 | `08` | 模型集成 |
 | `09` | 聚类 |
 | `10` | 表征、重构及生成模型 |
 
-- `slides` 为课件，`board_notes` 为板书。同一章、同一类型可以放多个文件，也可以只放板书。
+- `slides` 为课件，`board_notes` 为板书，`additional_materials` 为附加材料。同一章、同一类型可以放多个文件；也可以只放板书或附加材料。
+- 深度学习简介中的 `06.1 基础篇` 与 `06.2 进阶篇` 属于同一个第 06 章，使用 `assets/teaching/06/` 下的资源目录，后续章节的编号不变。多个 PDF 可通过文件名区分基础篇和进阶篇。
+- 例如将 PDF 放入 `assets/teaching/02/additional_materials/`，下一次构建会在第二章显示“附加材料”下载入口。多个文件分别显示文件名。空目录不产生按钮，不需要 `.gitkeep`。
 - 页面标题使用不含扩展名的文件名；中文、空格和 `.PDF` 大写扩展名均可。下载时保留原文件名。
 - 文件按名称自然排序，例如 `01 内容.pdf`、`02 内容.pdf`、`10 内容.pdf`。
 - PDF 直接放在类型目录下，不再嵌套子目录。未知章节或类型目录中的 PDF 会在构建日志中提示并跳过。
@@ -46,6 +51,7 @@ resources:
       file: /assets/teaching/01/slides/第一章 绪论.pdf
       download_name: introduction.pdf
   board_notes: []
+  additional_materials: []
 ```
 
 同一路径同时被自动发现和手动登记时，优先使用手动配置，页面不会重复列出。手动配置的文件改名或删除时，也需要更新或删除相应配置。
