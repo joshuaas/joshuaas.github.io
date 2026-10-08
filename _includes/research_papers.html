@@ -1,7 +1,0 @@
-<div class="publications">
-    {% for t in include.paper_titles %}
-        {% for abbr in page.types %}
-            {% bibliography -f papers -q @*[title={{t}} && abbr={{abbr}}]* %}
-        {% endfor %}
-    {% endfor %}
-</div>
