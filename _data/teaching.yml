@@ -81,32 +81,32 @@ modules:
     title: 深度学习简介
     chapters:
       - number: "06"
-        title: 深度神经网络
-        outline_title: 深度神经网络
-        parts:
-          - title: 基础篇
-            description: 介绍 MLP 基础模型与 BP 算法。
-          - title: 进阶篇
-            description: 介绍高维数据、时序数据和图数据对应的深度学习方法，以及表格大模型与物理启发模型。
+        title: 深度学习基础篇
+        outline_title: 基础篇
+        description: 介绍 MLP 基础模型与 BP 算法。
+      - number: "07"
+        title: 深度学习进阶篇
+        outline_title: 进阶篇
+        description: 介绍高维数据、时序数据和图数据对应的深度学习方法，以及表格大模型与物理启发模型。
   - id: strategies
     title: 有监督学习进阶原理
     chapters:
-      - number: "07"
+      - number: "08"
         title: 间隔理论
         outline_title: 间隔理论
         description: 介绍间隔理论及其在学习算法中的作用。
-      - number: "08"
+      - number: "09"
         title: 模型集成
         outline_title: 模型集成
         description: 介绍模型集成的基本思想与方法。
   - id: unsupervised
     title: 无监督学习中的原理
     chapters:
-      - number: "09"
+      - number: "10"
         title: 聚类
         outline_title: 聚类
         description: 介绍聚类任务的基本思想与方法。
-      - number: "10"
+      - number: "11"
         title: 表征、重构及生成模型
         outline_title: 表征、重构及生成模型
         description: 介绍数据表征、重构与生成模型的基本原理。
