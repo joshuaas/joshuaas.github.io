@@ -24,32 +24,29 @@
 
     <section id="overview" class="overview-section section-space" aria-labelledby="overview-title">
       <div class="section-heading shell"><h2 id="overview-title">课程概览</h2></div>
-      <div class="course-gallery feature-gallery" data-gallery aria-labelledby="overview-title" role="region" aria-roledescription="轮播">
-        <div class="gallery-track" id="overview-track" data-gallery-track tabindex="0" aria-label="课程特色，左右滑动查看更多">
-          {% for feature in course.features %}
-          <article class="gallery-card feature-panel feature-{{ feature.id }}" id="overview-card-{{ feature.id }}" data-gallery-card role="group" aria-roledescription="幻灯片" aria-label="{{ feature.title }}">
-            <div class="feature-copy">
-              {% if feature.id == 'mathematics' %}
-              <h3>数学基础<span>串讲</span></h3>
-              <div class="feature-description"><p><strong>线性代数</strong>{{ feature.linear_algebra }}<span class="detail-note">{{ feature.linear_detail }}</span></p><p><strong>概率论</strong>{{ feature.probability }}</p></div>
-              {% elsif feature.id == 'minimum' %}
-              <h3>{{ feature.title }}</h3>
-              <figure class="minimum-quote">
-                <blockquote lang="en"><p>{% for segment in feature.quote_segments %}{% if segment.color %}<strong class="quote-{{ segment.color }}">{{ segment.text | escape }}</strong>{% else %}{{ segment.text | escape }}{% endif %}{% endfor %}</p></blockquote>
-                <figcaption>— <cite>{{ feature.attribution }}</cite></figcaption>
-              </figure>
-              {% else %}
-              <h3>AI <span class="science-plus">+</span> SCI</h3>
-              <p class="science-intro">{{ feature.introduction }}</p>
-              <div class="science-directions"><p><strong>AI4S</strong><span>{{ feature.ai4s }}</span></p><p><strong>S4AI</strong><span>{{ feature.s4ai }}</span></p></div>
-              <div class="science-examples">{% for example in feature.examples %}<p>{{ example.text }}</p>{% endfor %}</div>
-              {% endif %}
-            </div>
-            {% unless feature.id == 'minimum' %}<div class="feature-visual">{% include teaching/feature-art.html feature=feature.id %}</div>{% endunless %}
-          </article>
-          {% endfor %}
-        </div>
-        {% include teaching/gallery-controls.html items=course.features prefix="overview" label="课程特色" %}
+      <div class="course-stack feature-stack shell">
+        {% for feature in course.features %}
+        <article class="course-card feature-panel feature-{{ feature.id }}" id="overview-card-{{ feature.id }}" aria-label="{{ feature.title }}">
+          <div class="feature-copy">
+            {% if feature.id == 'mathematics' %}
+            <h3>数学基础<span>串讲</span></h3>
+            <div class="feature-description"><p><strong>线性代数</strong>{{ feature.linear_algebra }}<span class="detail-note">{{ feature.linear_detail }}</span></p><p><strong>概率论</strong>{{ feature.probability }}</p></div>
+            {% elsif feature.id == 'minimum' %}
+            <h3>{{ feature.title }}</h3>
+            <figure class="minimum-quote">
+              <blockquote lang="en"><p>{% for segment in feature.quote_segments %}{% if segment.color %}<strong class="quote-{{ segment.color }}">{{ segment.text | escape }}</strong>{% else %}{{ segment.text | escape }}{% endif %}{% endfor %}</p></blockquote>
+              <figcaption>— <cite>{{ feature.attribution }}</cite></figcaption>
+            </figure>
+            {% else %}
+            <h3>AI <span class="science-plus">+</span> SCI</h3>
+            <p class="science-intro">{{ feature.introduction }}</p>
+            <div class="science-directions"><p><strong>AI4S</strong><span>{{ feature.ai4s }}</span></p><p><strong>S4AI</strong><span>{{ feature.s4ai }}</span></p></div>
+            <div class="science-examples">{% for example in feature.examples %}<p>{{ example.text }}</p>{% endfor %}</div>
+            {% endif %}
+          </div>
+          {% unless feature.id == 'minimum' %}<div class="feature-visual">{% include teaching/feature-art.html feature=feature.id %}</div>{% endunless %}
+        </article>
+        {% endfor %}
       </div>
       <div class="shell">
         <div class="goal-tabs" data-tabset data-initial-tab="1">
@@ -61,40 +58,37 @@
 
     <section id="curriculum" class="curriculum-section section-space" aria-labelledby="curriculum-title">
       <div class="section-heading shell"><h2 id="curriculum-title">课程内容及资料下载</h2></div>
-      <div class="course-gallery module-gallery" data-gallery aria-labelledby="curriculum-title" role="region" aria-roledescription="轮播">
-        <div class="gallery-track" id="curriculum-track" data-gallery-track tabindex="0" aria-label="课程模块，左右滑动查看更多">
-          {% for module in course.modules %}
-          <article id="curriculum-card-{{ module.id }}" class="gallery-card module-panel" data-gallery-card role="group" aria-roledescription="幻灯片" aria-label="{{ module.title }}">
-            <div class="module-copy">
-              <h3>{{ module.title }}</h3>
-              <ul class="module-chapters">
-                {% for chapter in module.chapters %}
-                <li>
-                  {% if chapter.parts %}
-                  {% for part in chapter.parts %}
-                  <div class="chapter-part">
-                    <h4><span class="chapter-number">{{ chapter.number }}.{{ forloop.index }}</span><span>{{ part.title }}</span></h4>
-                    <p class="chapter-description">{{ part.description }}</p>
-                  </div>
-                  {% endfor %}
-                  {% else %}
-                  <h4><span class="chapter-number">{{ chapter.number }}</span><span>{{ chapter.outline_title }}</span></h4>
-                  {% if chapter.description %}<p class="chapter-description">{{ chapter.description }}</p>{% endif %}
-                  {% endif %}
-                  <div class="chapter-downloads">
-                    {% for resource_type in course.resource_types %}{% assign documents = chapter.resources[resource_type.id] %}{% for document in documents %}
-                    <a{% if resource_type.id == 'additional_materials' %} class="chapter-additional-download"{% endif %} href="{{ document.file | relative_url | uri_escape | escape }}" download="{{ document.download_name | default: '' | escape }}" aria-label="下载{{ chapter.title }}{{ resource_type.title }}：{{ document.title | escape }}"><span class="download-label">{{ resource_type.title }}{% if resource_type.id == 'additional_materials' or documents.size > 1 %} · {{ document.title | escape }}{% endif %}</span><span class="download-arrow" aria-hidden="true">↓</span></a>
-                    {% endfor %}{% endfor %}
-                  </div>
-                </li>
+      <div class="course-stack module-stack shell">
+        {% for module in course.modules %}
+        <article id="curriculum-card-{{ module.id }}" class="course-card module-panel" aria-label="{{ module.title }}">
+          <div class="module-copy">
+            <h3>{{ module.title }}</h3>
+            <ul class="module-chapters">
+              {% for chapter in module.chapters %}
+              <li>
+                {% if chapter.parts %}
+                {% for part in chapter.parts %}
+                <div class="chapter-part">
+                  <h4><span class="chapter-number">{{ chapter.number }}.{{ forloop.index }}</span><span>{{ part.title }}</span></h4>
+                  <p class="chapter-description">{{ part.description }}</p>
+                </div>
                 {% endfor %}
-              </ul>
-            </div>
-            <div class="module-visual">{% include teaching/module-art.html module=module.id %}</div>
-          </article>
-          {% endfor %}
-        </div>
-        {% include teaching/gallery-controls.html items=course.modules prefix="curriculum" label="课程模块" %}
+                {% else %}
+                <h4><span class="chapter-number">{{ chapter.number }}</span><span>{{ chapter.outline_title }}</span></h4>
+                {% if chapter.description %}<p class="chapter-description">{{ chapter.description }}</p>{% endif %}
+                {% endif %}
+                <div class="chapter-downloads">
+                  {% for resource_type in course.resource_types %}{% assign documents = chapter.resources[resource_type.id] %}{% for document in documents %}
+                  <a{% if resource_type.id == 'additional_materials' %} class="chapter-additional-download"{% endif %} href="{{ document.file | relative_url | uri_escape | escape }}" download="{{ document.download_name | default: '' | escape }}" aria-label="下载{{ chapter.title }}{{ resource_type.title }}：{{ document.title | escape }}"><span class="download-label">{{ resource_type.title }}{% if resource_type.id == 'additional_materials' or documents.size > 1 %} · {{ document.title | escape }}{% endif %}</span><span class="download-arrow" aria-hidden="true">↓</span></a>
+                  {% endfor %}{% endfor %}
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="module-visual">{% include teaching/module-art.html module=module.id %}</div>
+        </article>
+        {% endfor %}
       </div>
       <div class="shell">
         <details class="complete-outline">

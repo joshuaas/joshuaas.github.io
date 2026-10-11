@@ -8,10 +8,6 @@ body.teaching-page { padding-bottom: 0; }
   --course-card: #fff;
   --course-tint: #edf3fa;
   --course-line: #d9dfe7;
-  --gallery-gutter: max(48px, calc((100vw - 1160px) / 2));
-  /* Keep var() outside calc(): the existing production CSS minifier rewrites nested custom properties. */
-  --gallery-card-width: min(1040px, calc(100vw - 136px));
-  --gallery-end: max(88px, calc((100vw - 920px) / 2));
   color: var(--course-ink);
   background: var(--course-card);
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -75,39 +71,11 @@ html[data-theme="dark"] .teaching-content {
 .teaching-content .section-heading { margin-bottom: 28px; }
 .teaching-content .section-heading h2 { font-size: 48px; font-weight: 600; letter-spacing: -.04em; line-height: 1.3; }
 .teaching-content .overview-section, .teaching-content .curriculum-section { background: var(--course-paper); }
-.teaching-content .gallery-track {
-  position: relative;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: var(--gallery-card-width);
-  align-items: stretch;
-  gap: 24px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 4px var(--gallery-gutter) 12px;
-  padding-inline-end: var(--gallery-end);
-  scroll-padding-inline-start: var(--gallery-gutter);
-  scroll-snap-type: x mandatory;
-  overscroll-behavior-x: contain;
-  scrollbar-width: none;
-}
-.teaching-content .gallery-track::-webkit-scrollbar, .teaching-content .gallery-indicators::-webkit-scrollbar { display: none; }
-/* A single grid row sizes every card to its tallest sibling, including offscreen cards. */
-.teaching-content .gallery-card { scroll-snap-align: start; min-width: 0; border-radius: 30px; overflow: hidden; }
-.teaching-content .gallery-controls { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 16px; }
-.teaching-content .gallery-control { flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50%; background: var(--course-line); color: var(--course-ink); border: 0; padding: 10px; }
-.teaching-content .gallery-control svg { width: 24px; height: 24px; }
-.teaching-content .gallery-control:disabled { cursor: default; opacity: .35; }
-.teaching-content .gallery-arrows { display: flex; gap: 8px; flex-shrink: 0; }
-.teaching-content .gallery-indicators { display: flex; gap: 4px; padding: 5px; background: var(--course-line); border-radius: 30px; overflow-x: auto; min-width: 0; scrollbar-width: none; }
-.teaching-content .gallery-indicator { flex-shrink: 0; position: relative; overflow: hidden; background: transparent; border: 0; border-radius: 24px; padding: 11px 16px; font-size: 17px; font-weight: 500; line-height: 1.4; color: var(--course-muted); white-space: nowrap; }
-.teaching-content .gallery-indicator[aria-pressed="true"] { color: var(--course-card); background: var(--course-ink); }
-.teaching-content .gallery-progress { position: absolute; inset: auto 16px 5px; height: 2px; background: currentColor; opacity: .7; transform: scaleX(0); transform-origin: left; }
-.teaching-content [data-timing="true"] .gallery-indicator[aria-pressed="true"] .gallery-progress { animation: gallery-progress 12s linear forwards; }
-.teaching-content .gallery-playback[aria-pressed="true"] .play-icon, .teaching-content .gallery-playback[aria-pressed="false"] .pause-icon { display: none; }
-.teaching-content .feature-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; min-height: 560px; padding: 44px; background: var(--course-card); }
+.teaching-content .course-stack { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+.teaching-content .course-card { min-width: 0; border-radius: 30px; overflow: hidden; scroll-margin-top: 88px; }
+.teaching-content .feature-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; min-height: 440px; padding: 44px; background: var(--course-card); }
 .teaching-content .feature-mathematics { background: var(--course-tint); }
-.teaching-content .feature-copy { position: relative; z-index: 1; }
+.teaching-content .feature-copy { min-width: 0; position: relative; z-index: 1; }
 .teaching-content .feature-copy h3 { font-size: 56px; line-height: 1.2; font-weight: 600; letter-spacing: -.045em; margin-bottom: 28px; }
 .teaching-content .feature-mathematics h3 span { display: inline; color: var(--course-blue); }
 .teaching-content .feature-description { font-size: 24px; line-height: 1.65; color: var(--course-muted); }
@@ -144,7 +112,7 @@ html[data-theme="dark"] .teaching-content {
 .teaching-content .goal-panel { grid-area: 1/1; padding-top: 22px; }
 .course-ready .teaching-content .goal-panel[data-active="false"] { visibility: hidden; pointer-events: none; }
 .teaching-content .goal-panel p { font-size: 25px; line-height: 1.7; color: var(--course-muted); }
-.teaching-content .module-panel { display: grid; grid-template-columns: 1.3fr 1fr; align-items: center; gap: 28px; padding: 44px; min-height: 500px; background: var(--course-card); }
+.teaching-content .module-panel { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: center; gap: 36px; padding: 44px; min-height: 360px; background: var(--course-card); }
 .teaching-content .module-copy { min-width: 0; }
 .teaching-content .module-copy h3 { font-size: 48px; line-height: 1.25; font-weight: 600; letter-spacing: -.04em; text-wrap: balance; }
 .teaching-content .module-chapters { margin: 26px 0 0; padding: 0; list-style: none; }
@@ -179,9 +147,9 @@ html[data-theme="dark"] .teaching-content {
 .teaching-content .margin-boundary { animation: margin-emphasis 7.2s ease-in-out infinite; }
 .teaching-content .cluster-points circle { animation: cluster-gather 7s ease-in-out infinite; }
 .teaching-content .cluster-regions circle { transform-box: fill-box; transform-origin: center; animation: cluster-reveal 7s ease-in-out infinite; }
-.teaching-content .module-art * { animation-play-state: paused; }
-.teaching-content .module-gallery[data-in-view="true"] .module-panel[data-current="true"] .module-art * { animation-play-state: running; }
-html:not(.course-ready) .teaching-content .module-art * { animation: none !important; }
+.teaching-content .course-card :is(.module-art,.feature-art) * { animation-play-state: paused; }
+.teaching-content .course-card.art-in-view :is(.module-art,.feature-art) * { animation-play-state: running; }
+html:not(.course-ready) .teaching-content .course-card :is(.module-art,.feature-art) * { animation: none !important; }
 .teaching-content summary { cursor: pointer; list-style: none; touch-action: manipulation; }
 .teaching-content summary::-webkit-details-marker { display: none; }
 .teaching-content details[open] summary > span { transform: rotate(45deg); }
@@ -196,14 +164,13 @@ html:not(.course-ready) .teaching-content .module-art * { animation: none !impor
 .teaching-content .outline-parts strong { color: var(--course-blue); font-weight: 500; }
 .teaching-content .course-footer { padding-block: 28px; background: var(--course-paper); color: var(--course-muted); font-size: 16px; }
 .teaching-content .course-footer .shell { display: flex; justify-content: space-between; gap: 20px; }
-html:not(.course-ready) .teaching-content :is(.gallery-controls,.goal-tablist) { display: none; }
+html:not(.course-ready) .teaching-content .goal-tablist { display: none; }
 html:not(.course-ready) .teaching-content .goal-panels { display: block; }
 @keyframes course-arrive { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 @keyframes course-logo-arrive { from { opacity: 0; transform: translateY(18px) scale(.97); } to { opacity: 1; transform: none; } }
 @keyframes logo-float { 0%,100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-1.66666667%,0); } }
 @keyframes logo-fragment-drift { 0%,100% { transform: translate3d(0,0,0) rotate(0); } 50% { transform: translate3d(var(--fragment-x),var(--fragment-y),0) rotate(var(--fragment-turn)); } }
 @keyframes geometry-drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-@keyframes gallery-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes basis-transform { 0%,100% { transform: skewX(0); } 35% { transform: skewX(-7deg) translateY(-8px); } 70% { transform: skewX(7deg) translateY(4px); } }
 @keyframes basis-vector { 0%,100% { transform: rotate(0); } 35% { transform: rotate(-9deg) scaleX(1.03); } 70% { transform: rotate(7deg) scaleX(.97); } }
 @keyframes curve-fit { 0%,10% { stroke-dashoffset: 1; opacity: 0; } 15% { stroke-dashoffset: 1; opacity: 1; } 65%,90% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
@@ -216,23 +183,23 @@ html:not(.course-ready) .teaching-content .goal-panels { display: block; }
 @keyframes cluster-gather { 0%,10%,100% { transform: translate(var(--cluster-x),var(--cluster-y)); } 60%,88% { transform: translate(0,0); } }
 @keyframes cluster-reveal { 0%,15%,100% { opacity: 0; transform: scale(.65); } 60%,88% { opacity: 1; transform: scale(1); } }
 @media (max-width: 1000px) {
-  .teaching-content { --gallery-gutter: 32px; --gallery-card-width: calc(100vw - 104px); --gallery-end: 72px; }
   .teaching-content .shell { width: calc(100% - 64px); }
   .teaching-content .feature-panel, .teaching-content .module-panel { padding: 36px; gap: 24px; }
   .teaching-content .feature-copy h3, .teaching-content .module-copy h3 { font-size: 42px; }
   .teaching-content .feature-description, .teaching-content .science-intro { font-size: 22px; }
   .teaching-content .minimum-quote blockquote { font-size: 28px; }
-  .teaching-content .gallery-indicator { font-size: 16px; padding-inline: 12px; }
 }
 @media (min-width: 761px) {
+  .teaching-content .module-panel:nth-child(even) { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); background: var(--course-tint); }
+  .teaching-content .module-panel:nth-child(even) .module-copy { grid-column: 2; grid-row: 1; }
+  .teaching-content .module-panel:nth-child(even) .module-visual { grid-column: 1; grid-row: 1; }
   .teaching-content .feature-mathematics { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 16px; }
-  .teaching-content .feature-mathematics .geometry-art { width: 135%; max-width: none; margin-left: -30%; }
+  .teaching-content .feature-mathematics .geometry-art { width: 135%; max-width: none; margin-left: -45%; }
 }
 @media (min-width: 761px) and (max-width: 1100px) {
   .teaching-content .feature-mathematics .geometry-art { width: 125%; margin-left: -12%; }
 }
 @media (max-width: 760px) {
-  .teaching-content { --gallery-gutter: 20px; --gallery-card-width: calc(100vw - 48px); --gallery-end: 28px; }
   .teaching-content .shell { width: calc(100% - 40px); }
   .teaching-content .section-space { padding-block: 42px; }
   .teaching-content .hero-inner { gap: 22px; padding-block: 32px; }
@@ -247,22 +214,13 @@ html:not(.course-ready) .teaching-content .goal-panels { display: block; }
   .teaching-content .pill-link { min-height: 44px; padding-inline: 20px; }
   .teaching-content .section-heading { margin-bottom: 22px; }
   .teaching-content .section-heading h2 { font-size: 36px; }
-  .teaching-content .gallery-track { gap: 12px; }
-  .teaching-content .gallery-controls { display: grid; grid-template-columns: 44px 1fr auto; gap: 12px; margin-top: 12px; }
-  .teaching-content .gallery-control { flex-basis: 44px; width: 44px; height: 44px; padding: 10px; }
-  .teaching-content .gallery-playback { grid-column: 1; grid-row: 2; }
-  .teaching-content .gallery-indicators { grid-column: 1 / -1; grid-row: 1; }
-  .teaching-content .gallery-arrows { grid-column: 3; grid-row: 2; }
-  .teaching-content .gallery-indicators { padding: 4px; }
-  .teaching-content .gallery-indicator { font-size: 16px; padding: 10px 12px; }
-  .teaching-content .gallery-arrows { gap: 6px; }
-  /* Equal-height cards retain a shared row; the art fills spare space rather than leaving it below the text. */
+  .teaching-content .course-stack { gap: 18px; }
   .teaching-content .feature-panel { display: flex; flex-direction: column; gap: 20px; padding: 24px; border-radius: 24px; min-height: 0; }
   .teaching-content .feature-copy { width: 100%; }
   .teaching-content .feature-copy h3 { font-size: 34px; margin-bottom: 20px; }
   .teaching-content .feature-mathematics h3 span { display: inline; margin-left: 3px; }
-  .teaching-content .feature-visual { display: flex; flex: 1 0 120px; align-items: flex-end; justify-content: center; width: 100%; min-height: 120px; }
-  .teaching-content .feature-art { width: 100%; height: 100%; max-height: 250px; }
+  .teaching-content .feature-visual { display: flex; flex: 0 0 auto; align-items: center; justify-content: center; width: 100%; min-height: 120px; }
+  .teaching-content .feature-art { width: 100%; height: auto; max-height: 250px; }
   .teaching-content .science-art { max-height: 120px; }
   .teaching-content .feature-description, .teaching-content .science-intro { font-size: 19px; line-height: 1.6; }
   .teaching-content .feature-description strong { font-size: 20px; }
@@ -285,8 +243,8 @@ html:not(.course-ready) .teaching-content .goal-panels { display: block; }
   .teaching-content .goal-panel p { font-size: 19px; line-height: 1.65; }
   .teaching-content .module-panel { display: flex; flex-direction: column; gap: 16px; padding: 24px; min-height: 0; border-radius: 24px; }
   .teaching-content .module-copy { width: 100%; }
-  .teaching-content .module-visual { display: flex; flex: 1 0 140px; align-items: flex-end; justify-content: center; width: 100%; min-height: 140px; }
-  .teaching-content .module-art { width: 100%; height: 100%; max-height: 270px; }
+  .teaching-content .module-visual { display: flex; flex: 0 0 auto; align-items: center; justify-content: center; width: 100%; min-height: 140px; }
+  .teaching-content .module-art { width: 100%; height: auto; max-height: 220px; }
   .teaching-content .module-copy h3 { font-size: 29px; text-wrap: pretty; }
   .teaching-content .module-chapters { margin-top: 20px; }
   .teaching-content .module-chapters li { padding: 12px 0; }
@@ -302,7 +260,6 @@ html:not(.course-ready) .teaching-content .goal-panels { display: block; }
   .teaching-content .course-footer .shell { flex-wrap: wrap; gap: 14px; }
 }
 @media (max-width: 360px) {
-  .teaching-content { --gallery-gutter: 16px; --gallery-card-width: calc(100vw - 40px); --gallery-end: 24px; }
   .teaching-content .shell { width: calc(100% - 32px); }
   .teaching-content .feature-panel, .teaching-content .module-panel, .teaching-content .goal-tabs { padding: 20px; }
   .teaching-content .feature-copy h3 { font-size: 30px; }

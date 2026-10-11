@@ -63,6 +63,11 @@ Dir.mktmpdir('teaching-resources-') do |temporary|
   assert(chapters.find { |chapter| chapter['number'] == '06' }['resources'].values.all?(&:empty?), 'Empty chapter failed')
 
   html = File.read(File.join(destination, 'teaching/index.html'))
+  assert(!html.include?('data-gallery') && !html.include?('自动播放') && !html.include?('左右滑动') && !html.include?('aria-roledescription="幻灯片"'), 'Stacked course sections must not render carousel controls or semantics')
+  feature_ids = html.scan(/<article[^>]*id="overview-card-([^"]+)"/).flatten
+  module_ids = html.scan(/<article[^>]*id="curriculum-card-([^"]+)"/).flatten
+  assert(feature_ids == site.data['teaching']['features'].map { |feature| feature['id'] }, 'Overview cards must all render in course order')
+  assert(module_ids == site.data['teaching']['modules'].map { |mod| mod['id'] }, 'Curriculum cards must all render in course order')
   assert(html.include?('10 矩阵 &amp;copy; 导数'), 'Filename title was not HTML escaped')
   assert(html.include?('下载回归板书：回归板书'), 'Board-only link missing from outline')
   assert(html.include?('下载分类附加材料：分类补充阅读'), 'Additional-materials-only link missing from outline')
